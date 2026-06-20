@@ -1,0 +1,334 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+:root {
+    --nav-height: 60px;
+    --radius: 20px;
+    --outside-radius: 25px;
+    --border: 8px;
+    --color-gray: #2D2D32;
+    --color-yellow: #FFE35A;
+    --color-blue: #DDECFF;
+    --cursor-dot-size: 20px;
+    --cursor-dot-border: 2px;
+    --cursor-dot-fall-distance: 300px;   /* на сколько падает вниз */
+    --cursor-dot-fall-duration: 1.5s;    /* длительность падения */
+    --cursor-dot-fade-at: 0.8;           /* исчезает на 70% пути (до «дна») */
+    --cursor-dot-spawn-interval: 30; 
+}
+.cursor-trail {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.cursor-dot {
+    position: absolute;
+    width: var(--cursor-dot-size);
+    height: var(--cursor-dot-size);
+    border-radius: 50%;
+    border: var(--cursor-dot-border) solid;
+    transform: translate(-50%, -50%);
+    will-change: transform, opacity;
+}
+
+h4 {
+    font-family: 'Stolzl';
+    font-weight: 400;
+}
+
+body {
+    max-width: 1920px;
+    min-width: 100vw;
+    min-height: 100vh;
+    cursor: url('../assets/img/cursor-default.png'), default;
+}
+
+.clickable {
+    cursor: url('../assets/img/cursor-active.png'), pointer;
+}
+
+nav {
+    width: 100%;
+    height: 60px;
+    background-color: var(--color-gray);
+    padding: 8px 28px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-sections {
+    display: flex;
+    gap: 65px;
+}
+
+.nav-section {
+    position: relative;
+    display: inline-block;
+}
+
+.default-nav {
+    display: block;
+    transition: opacity 0.3s;
+}
+
+.active-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.nav-section:hover {
+    img {
+        &:is(.default-nav) {
+            opacity: 0
+        }
+
+        &:is(.active-nav) {
+            opacity: 1
+        }
+    }
+}
+
+main {
+    width: 100%;
+    height: calc(100vh - var(--nav-height));
+    background-image: url('../assets/img/main-bg.svg');
+    display: flex;
+    align-items: center;
+    padding-left: 35px;
+}
+
+.box-color {
+    background-color: var(--color-yellow);
+    width: 1061px;
+    height: 928px;
+    border-radius: var(--outside-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-main {
+    width: 1011px;
+    height: 883px;
+    border: var(--border) var(--color-gray) solid;
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px 0 20px;
+    justify-content: space-between;
+}
+
+.stroke-text--hero {
+    --font-family: Stolzl;
+    --font-size: 85px;
+    --font-weight: 400;
+    --padding: 10px;
+    --text-color: var(--color-blue);
+    --stroke-width: 32px;
+    --stroke-color: var(--color-gray);
+}
+
+.stroke-text--counter {
+    --font-family: Stolzl;
+    --font-size: 91px;
+    --font-weight: 700;
+    --padding: 0;
+    --text-color: var(--color-yellow);
+    --stroke-width: 11px;
+    --stroke-color: var(--color-gray);
+}
+
+.stroke-text {
+    position: relative;
+    display: inline-block;
+
+    padding-left: var(--padding);
+
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    line-height: 1;
+}
+
+/* основной текст */
+.stroke-text span {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    color: var(--text-color);
+    font: inherit;
+}
+
+/* обводка */
+.stroke-text::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    /* общий сдвиг + дополнительный сдвиг влево */
+    left: var(--padding);
+
+    z-index: 1;
+
+    font: inherit;
+
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: var(--stroke-width) var(--stroke-color);
+
+    pointer-events: none;
+}
+
+.main-row-info {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.colomn-marking {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}
+
+.main-text {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}
+
+.year {
+    display: flex;
+    width: 265px;
+    padding: 20px 0;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--outside-radius);
+    box-shadow: inset 0 0 0 var(--border) var(--color-gray);
+    background: var(--color-blue);
+    color: var(--color-gray);
+    font-family: Stolzl;
+    font-size: 51px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.marking {
+    display: flex;
+    gap: 25px;
+}
+
+.counter-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    h4 {
+        line-height: 124.8%;
+        height: 120px;
+    }
+}
+
+.line {
+    width: calc(100% + 40px);
+    height: var(--border);
+    background-color: var(--color-gray);
+    margin-left: -20px;
+}
+
+.subtitle-counter {
+    color: var(--color-gray);
+    font-family: Stolzl;
+    font-size: 41px;
+    font-weight: 400;
+    line-height: 124.8%;
+    height: 30px;
+}
+
+footer {
+    width: 100%;
+    height: 399px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    background-color: var(--color-gray);
+}
+
+.left-footer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0 27px 0;
+
+    p {
+        color: var(--color-blue);
+        text-align: justify;
+        font-family: "Nunito Sans";
+        font-size: 43px;
+        font-weight: 400;
+        line-height: 124.8%;
+    }
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+
+    img {
+        width: 430px;
+    }
+}
+
+.right-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    p {
+        color: var(--color-blue);
+        text-align: justify;
+        font-family: "Nunito Sans";
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 124.8%;
+    }
+}
+
+.footer-links {
+    display: flex;
+    gap: 105px;
+    padding: 40px 0;
+
+    a {
+        color: var(--color-blue);
+        font-family: "Nunito Sans";
+        font-size: 43px;
+        font-weight: 400;
+        line-height: 124.8%;
+    }
+}
+
+.name {
+    display: flex;
+    gap: 93px;
+    padding: 27px 0;
+    justify-content: flex-end;
+}

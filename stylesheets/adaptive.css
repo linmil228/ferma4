@@ -1,0 +1,443 @@
+/* index.html — desktop adaptive (down to 736px) */
+
+/*@media (max-width: 1440px) {
+    .stroke-text--hero {
+        --font-size: 72px;
+        --stroke-width: 27px;
+    }
+
+    .year {
+        width: 220px;
+        font-size: 44px;
+    }
+
+    .subtitle-counter {
+        font-size: 36px;
+    }
+
+    .footer-links {
+        gap: 70px;
+    }
+
+    .footer-links a {
+        font-size: 40px;
+    }
+
+    .left-footer p {
+        font-size: 36px;
+    }
+
+    .contacts img {
+        width: 360px;
+    }
+}
+
+@media (max-width: 1280px) {
+    nav {
+        padding: 8px 20px;
+    }
+
+    .nav-sections {
+        gap: 40px;
+    }
+
+    main {
+        padding-left: 24px;
+        padding-right: 24px;
+        justify-content: center;
+    }
+
+    .box-color {
+        width: min(1061px, calc(100vw - 48px));
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 1061 / 928;
+        max-height: calc(100vh - var(--nav-height) - 32px);
+    }
+
+    .box-main {
+        width: calc(100% - 50px);
+        height: calc(100% - 45px);
+        min-height: 0;
+        padding: 16px;
+    }
+
+    .stroke-text--hero {
+        --font-size: 58px;
+        --stroke-width: 22px;
+    }
+
+    .year {
+        width: 190px;
+        padding: 16px 0;
+        font-size: 38px;
+    }
+
+    .marking {
+        gap: 18px;
+    }
+
+    .marking img {
+        height: 72px;
+        width: auto;
+    }
+
+    .colomn-marking > img {
+        width: 100%;
+        height: auto;
+    }
+
+    .subtitle-counter {
+        font-size: 30px;
+    }
+
+    footer {
+        height: 320px;
+        padding: 0 24px;
+    }
+
+    .footer-links {
+        gap: 48px;
+        padding: 28px 0;
+    }
+
+    .footer-links a {
+        font-size: 32px;
+    }
+
+    .left-footer p {
+        font-size: 30px;
+    }
+
+    .contacts img {
+        width: 300px;
+    }
+
+    .right-footer p {
+        font-size: 24px;
+    }
+
+    .name {
+        gap: 60px;
+    }
+}
+
+@media (max-width: 1024px) {
+    :root {
+        --border: 6px;
+        --radius: 16px;
+        --outside-radius: 20px;
+    }
+
+    .nav-sections {
+        gap: 24px;
+    }
+
+    .nav-section img {
+        max-height: 44px;
+        width: auto;
+    }
+
+    .stroke-text--hero {
+        --font-size: 46px;
+        --stroke-width: 18px;
+        --padding: 8px;
+    }
+
+    .stroke-text--hero span {
+        max-width: 100%;
+    }
+
+    .year {
+        width: 160px;
+        padding: 12px 0;
+        font-size: 32px;
+    }
+
+    .marking {
+        gap: 14px;
+    }
+
+    .marking img {
+        height: 60px;
+    }
+
+    .main-text,
+    .colomn-marking {
+        gap: 14px;
+    }
+
+    .subtitle-counter {
+        font-size: 26px;
+    }
+
+    .line {
+        width: calc(100% + 32px);
+        margin-left: -16px;
+    }
+
+    footer {
+        height: 280px;
+        padding: 0 20px;
+    }
+
+    .footer-links {
+        gap: 32px;
+        padding: 20px 0;
+    }
+
+    .footer-links a {
+        font-size: 26px;
+    }
+
+    .left-footer p {
+        font-size: 26px;
+    }
+
+    .contacts {
+        gap: 10px;
+    }
+
+    .contacts img {
+        width: 240px;
+    }
+
+    .left-footer img[src*="barcode-footer"] {
+        max-width: 200px;
+        height: auto;
+    }
+
+    .name {
+        gap: 40px;
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .nav-sections {
+        gap: 16px;
+    }
+
+    .nav-section img {
+        max-height: 38px;
+    }
+
+    nav > img {
+        max-height: 30px;
+        width: auto;
+    }
+
+    .box-color {
+        width: min(1061px, calc(100vw - 32px));
+        max-height: calc(100vh - var(--nav-height) - 24px);
+    }
+
+    .box-main {
+        width: calc(100% - 36px);
+        height: calc(100% - 32px);
+        padding: 12px;
+    }
+
+    .stroke-text--hero {
+        --font-size: 36px;
+        --stroke-width: 14px;
+    }
+
+    .year {
+        width: 130px;
+        font-size: 26px;
+        border-radius: 16px;
+    }
+
+    .marking img {
+        height: 48px;
+    }
+
+    .subtitle-counter {
+        font-size: 22px;
+    }
+
+    footer {
+        height: auto;
+        min-height: 220px;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 16px 16px 20px;
+    }
+
+    .left-footer {
+        padding: 12px 0;
+        gap: 12px;
+    }
+
+    .left-footer p {
+        font-size: 22px;
+    }
+
+    .contacts img {
+        width: 200px;
+    }
+
+    .right-footer {
+        flex: 1;
+        min-width: 280px;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        gap: 20px 28px;
+        padding: 12px 0;
+    }
+
+    .footer-links a {
+        font-size: 22px;
+    }
+
+    .name {
+        gap: 24px;
+        padding: 12px 0;
+    }
+
+    .right-footer p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 736px) {
+    body {
+        min-width: 0;
+    }
+
+    nav {
+        padding: 8px 12px;
+    }
+
+    .nav-sections {
+        gap: 10px;
+    }
+
+    .nav-section img {
+        max-height: 32px;
+    }
+
+    nav > img {
+        max-height: 26px;
+    }
+
+    main {
+        padding-left: 12px;
+        padding-right: 12px;
+        min-height: calc(100vh - var(--nav-height));
+        height: auto;
+    }
+
+    .box-color {
+        width: 100%;
+        max-width: calc(100vw - 24px);
+        aspect-ratio: 1061 / 928;
+        max-height: none;
+    }
+
+    .box-main {
+        width: calc(100% - 24px);
+        height: calc(100% - 20px);
+        padding: 10px;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .stroke-text--hero {
+        --font-size: 28px;
+        --stroke-width: 11px;
+        --padding: 6px;
+    }
+
+    .main-row-info {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .year {
+        width: 110px;
+        padding: 10px 0;
+        font-size: 22px;
+    }
+
+    .marking {
+        gap: 10px;
+    }
+
+    .marking img {
+        height: 40px;
+    }
+
+    .main-text,
+    .colomn-marking {
+        gap: 10px;
+        width: 100%;
+    }
+
+    .subtitle-counter {
+        font-size: 18px;
+    }
+
+    .line {
+        width: calc(100% + 20px);
+        margin-left: -10px;
+    }
+
+    footer {
+        padding: 12px;
+        min-height: 0;
+    }
+
+    .left-footer {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 8px 0;
+    }
+
+    .contacts img {
+        width: 160px;
+    }
+
+    .left-footer p {
+        font-size: 18px;
+    }
+
+    .left-footer img[src*="barcode-footer"] {
+        max-width: 140px;
+    }
+
+    .right-footer {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .footer-links {
+        gap: 12px 20px;
+        padding: 8px 0;
+    }
+
+    .footer-links a {
+        font-size: 18px;
+    }
+
+    .name {
+        gap: 16px;
+        padding: 8px 0;
+        flex-wrap: wrap;
+    }
+
+    .right-footer p {
+        font-size: 16px;
+    }
+}*/
+@media (max-width: 1536px) {
+    
+}

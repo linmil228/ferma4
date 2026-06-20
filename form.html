@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ferma</title>
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <script src="js/cart-store.js" defer></script>
+    <script src="js/form-addresses.js" defer></script>
+    <script src="js/form.js" defer></script>
+</head>
+
+<body>
+    <nav>
+        <a href="./index.html" class="clickable">
+            <img src="assets/img/logo.svg" alt="ferma">
+        </a>
+        <div class="nav-sections">
+            <a href="./about.html" class="nav-section clickable">
+                <img class="default-nav" src="assets/img/about.svg" alt="">
+                <img class="active-nav" src="assets/img/about-active.svg" alt="">
+            </a>
+            <a href="./merch.html" class="nav-section clickable">
+                <img class="default-nav" src="assets/img/merch.svg" alt="">
+                <img class="active-nav" src="assets/img/merch-active.svg" alt="">
+            </a>
+            <a href="./order.html" class="nav-section clickable">
+                <img class="default-nav" src="assets/img/order.svg" alt="">
+                <img class="active-nav" src="assets/img/order-active.svg" alt="">
+            </a>
+            <a href="./events.html" class="nav-section clickable">
+                <img class="default-nav" src="assets/img/events.svg" alt="">
+                <img class="active-nav" src="assets/img/events-active.svg" alt="">
+            </a>
+        </div>
+    </nav>
+
+    <section class="form">
+        <form class="form__card" action="#" novalidate>
+            <div class="form__left">
+                <div class="form__field">
+                    <label class="form__label" for="first-name">Имя</label>
+                    <input class="form__input" id="first-name" name="firstName" type="text" placeholder="Иван"
+                        autocomplete="given-name">
+                </div>
+                <div class="form__field">
+                    <label class="form__label" for="last-name">Фамилия</label>
+                    <input class="form__input" id="last-name" name="lastName" type="text" placeholder="Иванов"
+                        autocomplete="family-name">
+                </div>
+                <div class="form__field">
+                    <label class="form__label" for="middle-name">Отчество</label>
+                    <input class="form__input" id="middle-name" name="middleName" type="text" placeholder="Иванович"
+                        autocomplete="additional-name">
+                </div>
+                <div class="form__field">
+                    <label class="form__label" for="phone">Телефон</label>
+                    <input class="form__input" id="phone" name="phone" type="tel" placeholder="+7 (912) 345-67-89"
+                        autocomplete="tel">
+                </div>
+
+                <div class="form__toggles">
+                    <label class="form-toggle clickable">
+                        <input class="form-toggle__input" id="express-delivery" name="expressDelivery" type="checkbox">
+                        <span class="form-toggle__track" aria-hidden="true"></span>
+                        <span class="form-toggle__text">Express-доставка +300 ₽</span>
+                    </label>
+                    <label class="form-toggle clickable">
+                        <input class="form-toggle__input" id="call-before" name="callBefore" type="checkbox">
+                        <span class="form-toggle__track" aria-hidden="true"></span>
+                        <span class="form-toggle__text">Позвонить перед доставкой</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form__right">
+                <div class="form__address">
+                    <p class="form__label form__label--address">Адрес</p>
+
+                    <div class="form-combobox" data-combobox="city">
+                        <div class="form-combobox__trigger">
+                            <input class="form-combobox__input" type="text" placeholder="Город" autocomplete="off"
+                                aria-label="Город">
+                            <span class="form-combobox__arrow" aria-hidden="true"></span>
+                        </div>
+                        <ul class="form-combobox__list" role="listbox"></ul>
+                    </div>
+
+                    <div class="form__address-row">
+                        <div class="form-combobox form-combobox--street" data-combobox="street">
+                            <div class="form-combobox__trigger">
+                                <input class="form-combobox__input" type="text" placeholder="Улица" autocomplete="off"
+                                    aria-label="Улица" disabled>
+                                <span class="form-combobox__arrow" aria-hidden="true"></span>
+                            </div>
+                            <ul class="form-combobox__list" role="listbox"></ul>
+                        </div>
+
+                        <div class="form-combobox form-combobox--house" data-combobox="house">
+                            <div class="form-combobox__trigger">
+                                <input class="form-combobox__input" type="text" placeholder="Дом" autocomplete="off"
+                                    aria-label="Дом" disabled>
+                                <span class="form-combobox__arrow" aria-hidden="true"></span>
+                            </div>
+                            <ul class="form-combobox__list" role="listbox"></ul>
+                        </div>
+                    </div>
+                </div>
+
+                <label class="form__comment-wrap">
+                    <span class="visually-hidden">Комментарий к заказу</span>
+                    <textarea class="form__comment" name="comment" placeholder="Комментарий к заказу"></textarea>
+                </label>
+
+                <div class="form__checkout">
+                    <p class="form__total">770 ₽</p>
+                    <button class="form__pay-btn clickable" type="submit">Оплата</button>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <div class="left-footer">
+            <div class="contacts">
+                <img src="assets/img/logo-footer.svg" alt="">
+                <p>+7 912 345 67 89</p>
+            </div>
+            <img src="assets/img/barcode-footer.png" alt="">
+        </div>
+        <div class="right-footer">
+            <div class="footer-links">
+                <a href="./about.html">о нас</a>
+                <a href="./merch.html">мерч</a>
+                <a href="./order.html">сборка</a>
+                <a href="./events.html">события</a>
+            </div>
+            <div class="name">
+                <p>Курпаяниди Эллина</p>
+                <p>БРИЦП252</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
