@@ -34,6 +34,8 @@ function renderEvent(event) {
     if (posterEl) {
         posterEl.src = event.poster;
         posterEl.alt = event.name;
+        posterEl.loading = 'lazy';
+        posterEl.decoding = 'async';
     }
 
     if (dateEl) dateEl.textContent = event.date;

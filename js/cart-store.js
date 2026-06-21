@@ -95,10 +95,16 @@ function getProduct(id) {
     return MERCH_PRODUCTS.find((p) => p.id === id);
 }
 
+function getSizedImage(product, suffix) {
+    if (!product?.image) return '';
+    if (!suffix) return product.image;
+    return product.image.replace(/(\.[^./]+)$/, `${suffix}$1`);
+}
+
 function getProductImage(product) {
     if (!product?.image) return '';
     if (window.matchMedia('(max-width: 768px)').matches) {
-        return product.image.replace(/(\.[^./]+)$/, '-768$1');
+        return getSizedImage(product, '-768');
     }
     return product.image;
 }

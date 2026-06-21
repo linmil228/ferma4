@@ -40,6 +40,10 @@
     background-color: #898989;
 }
 
+.merch-product__gallery--product-bg {
+    background-color: #909090;
+}
+
 .merch-product__gallery--white {
     background-color: #fff;
 }
@@ -48,6 +52,7 @@
     position: absolute;
     inset: 0;
     background: #909090;
+    z-index: 0;
 }
 
 .merch-product__image {
@@ -56,6 +61,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: 1;
 }
 
 .merch-product__image--stickers {

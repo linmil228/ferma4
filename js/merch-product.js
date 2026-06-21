@@ -143,6 +143,7 @@ function renderProduct(product) {
 
     if (imageBgEl) {
         imageBgEl.hidden = !product.imageBg;
+        galleryEl?.classList.toggle('merch-product__gallery--product-bg', Boolean(product.imageBg));
     }
 
     if (galleryEl) {

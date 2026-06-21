@@ -127,11 +127,16 @@
     box-sizing: border-box;
 }
 
+.cart-card__image-wrap--has-bg {
+    background-color: #909090;
+}
+
 .cart-card__image-bg {
     position: absolute;
     inset: 0;
     background-color: #909090;
     border-radius: 10px;
+    z-index: 0;
 }
 
 .cart-card__image {
@@ -141,6 +146,7 @@
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+    z-index: 1;
 }
 
 .cart-card__image--stickers {

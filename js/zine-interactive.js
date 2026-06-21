@@ -17,17 +17,26 @@ const pageStage = document.getElementById('zine-page-stage');
 const pageImage = document.getElementById('zine-page-image');
 const tabs = document.querySelectorAll('.zine-interactive__content .tab');
 
+const preloaded = new Set();
+
 function setActiveTab(pageIndex) {
     tabs.forEach((tab) => {
         tab.classList.toggle('is-active', Number(tab.dataset.page) === pageIndex);
     });
 }
 
-function preloadPages() {
-    ZINE_PAGES.forEach((src) => {
-        const img = new Image();
-        img.src = src;
-    });
+function preloadPage(index) {
+    const src = ZINE_PAGES[index];
+    if (!src || preloaded.has(src)) return;
+    preloaded.add(src);
+    const img = new Image();
+    img.src = src;
+}
+
+function preloadAdjacent(index) {
+    preloadPage(index);
+    preloadPage(index + 1);
+    preloadPage(index - 1);
 }
 
 function changePage(pageIndex) {
@@ -54,11 +63,13 @@ function changePage(pageIndex) {
 
 tabs.forEach((tab) => {
     tab.addEventListener('click', () => {
-        changePage(Number(tab.dataset.page));
+        const pageIndex = Number(tab.dataset.page);
+        preloadAdjacent(pageIndex);
+        changePage(pageIndex);
     });
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    preloadPages();
+    preloadPage(0);
     setActiveTab(0);
 });

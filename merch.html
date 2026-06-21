@@ -42,9 +42,11 @@
     </nav>
     <div class="nav-overlay" aria-hidden="true"></div>
     <section class="header-section-merch">
-        <img class="header-section-merch__banner header-section-merch__banner--desktop" src="assets/img/banners/merch-title-banner.svg" alt="">
-        <img class="header-section-merch__banner header-section-merch__banner--768" src="assets/img/banners/merch-banner-768.svg" alt="">
-        <img class="header-section-merch__banner header-section-merch__banner--430" src="assets/img/banners/merch-banner-430.svg" alt="">
+        <picture class="header-section-merch__banner">
+            <source media="(max-width: 430px)" srcset="assets/img/banners/merch-banner-430.svg">
+            <source media="(max-width: 768px)" srcset="assets/img/banners/merch-banner-768.svg">
+            <img src="assets/img/banners/merch-title-banner.svg" alt="" decoding="async">
+        </picture>
         <h6 class="stroke-text stroke-text--merch-first-type"
             data-text="Сделали мерч таким&nbsp;же, как и&nbsp;наш сервис&nbsp;&mdash; простым, удобным 
         и&nbsp;без&nbsp;лишнего. Это вещи, которые можно использовать каждый день:&nbsp;на&nbsp;кухне, в&nbsp;работе или вне&nbsp;её.">
@@ -88,7 +90,7 @@
                 <img src="assets/img/ui/logo-footer.svg">
                 <p>+7 912 345 67 89</p>
             </div>
-            <img src="assets/img/ui/barcode-footer.png">
+            <img src="assets/img/ui/barcode-footer.png" alt="" loading="lazy" decoding="async">
         </div>
         <div class="right-footer">
             <div class="footer-links">

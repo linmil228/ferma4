@@ -6,8 +6,7 @@
         padding: 2.083vw 1.042vw; 
     }
 
-    .header-section-merch__banner,
-    .header-section-merch__banner--desktop {
+    .header-section-merch__banner {
         max-width: 80.729vw; 
     }
 
@@ -95,7 +94,7 @@
         min-height: auto;
     }
 
-    .header-section-merch__banner--desktop {
+    .header-section-merch__banner {
         max-width: 81.25vw; 
     }
 
@@ -186,7 +185,7 @@
         padding: 3.333vw 1.667vw;
     }
 
-    .header-section-merch__banner--desktop {
+    .header-section-merch__banner {
         max-width: 86.667vw; 
     }
 
@@ -279,12 +278,7 @@
         background-color: var(--color-blue);
     }
 
-    .header-section-merch__banner--desktop {
-        display: none;
-    }
-
-    .header-section-merch__banner--768 {
-        display: block;
+    .header-section-merch__banner {
         max-width: 88.802vw; 
     }
 
@@ -379,12 +373,7 @@
         background-color: var(--color-blue);
     }
 
-    .header-section-merch__banner--768 {
-        display: none;
-    }
-
-    .header-section-merch__banner--430 {
-        display: block;
+    .header-section-merch__banner {
         max-width: 91.628vw; 
     }
 

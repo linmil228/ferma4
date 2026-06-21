@@ -17,12 +17,12 @@
     display: block;
     width: 100%;
     max-width: 1550px;
-    height: auto;
 }
 
-.header-section-merch__banner--768,
-.header-section-merch__banner--430 {
-    display: none;
+.header-section-merch__banner img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .header-section-merch h6 {
@@ -89,9 +89,11 @@
 .merch-catalog {
     width: 100%;
     min-height: auto;
+    background-color: var(--color-blue);
     background-image: url(../../assets/img/backgrounds/merch-content-bg.svg);
     background-size: cover;
     background-position: center top;
+    background-repeat: no-repeat;
     padding: 120px 64px 80px;
     box-sizing: border-box;
 }
@@ -153,11 +155,16 @@
     overflow: hidden;
 }
 
+.merch-card__image-wrap--has-bg {
+    background-color: #909090;
+}
+
 .merch-card__image-bg {
     position: absolute;
     inset: 0;
     background: #909090;
     border-radius: var(--radius);
+    z-index: 0;
 }
 
 .merch-card__image {
@@ -170,6 +177,7 @@
     transform: translateZ(0);
     backface-visibility: hidden;
     pointer-events: none;
+    z-index: 1;
 }
 
 .merch-card__image--stickers {

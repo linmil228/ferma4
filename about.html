@@ -42,8 +42,11 @@
     <div class="nav-overlay" aria-hidden="true"></div>
     <section class="header-section-about">
         <div class="info-about-title">
-            <img class="info-about-title__banner info-about-title__banner--768" src="assets/img/banners/about-banner-768.svg" alt="">
-            <img class="info-about-title__banner info-about-title__banner--430" src="assets/img/banners/about-banner-430.svg" alt="">
+            <picture class="info-about-title__banner-wrap">
+                <source media="(max-width: 430px)" srcset="assets/img/banners/about-banner-430.svg">
+                <source media="(max-width: 768px)" srcset="assets/img/banners/about-banner-768.svg">
+                <img src="data:," alt="" width="1" height="1" decoding="async">
+            </picture>
         </div>
         <div class="info-text">
             <h6 class="stroke-text stroke-text--about-first-type"
@@ -66,7 +69,10 @@
             <span>ПОДРОБНЕЕ О НАШЕЙ РАБОТЕ</span>
         </div>
     </div>
-    <section class="zine-info">
+    <section class="zine-info lazy-bg"
+        data-bg="assets/img/backgrounds/zine-info-bg.svg"
+        data-bg-768="assets/img/backgrounds/zine-info-bg-768.svg"
+        data-bg-430="assets/img/backgrounds/zine-info-bg-430.svg">
         <h5 class="stroke-text stroke-text--about-third-type" data-text="Об аналитике в&nbsp;дистрибьюторстве"
             id="zine-title-theme-1">
             <span>Об аналитике в&nbsp;дистрибьюторстве</span>
@@ -110,7 +116,10 @@
             Наши другие странички тут!
         </div>
     </section>
-    <section class="zine-interactive">
+    <section class="zine-interactive lazy-bg"
+        data-bg="assets/img/backgrounds/zine-interactive-bg.svg"
+        data-bg-768="assets/img/backgrounds/zine-interactive-bg-768.svg"
+        data-bg-430="assets/img/backgrounds/zine-interactive-bg-430.svg">
         <div class="zine-interactive__content">
             <button type="button" class="tab yellow-tab left-tab clickable" id="zine-interactive-tab-1"
                 data-page="0" aria-label="Страница 1"></button>
@@ -141,13 +150,14 @@
     </section>
 
     <script src="js/zine-interactive.js" defer></script>
+    <script src="js/lazy-bg.js" defer></script>
     <footer>
         <div class="left-footer">
             <div class="contacts">
                 <img src="assets/img/ui/logo-footer.svg">
                 <p>+7 912 345 67 89</p>
             </div>
-            <img src="assets/img/ui/barcode-footer.png">
+            <img src="assets/img/ui/barcode-footer.png" alt="" loading="lazy" decoding="async">
         </div>
         <div class="right-footer">
             <div class="footer-links">

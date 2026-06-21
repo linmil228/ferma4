@@ -92,6 +92,7 @@ function createCard(product) {
     imageWrap.className = 'merch-card__image-wrap';
 
     if (product.imageBg) {
+        imageWrap.classList.add('merch-card__image-wrap--has-bg');
         const bg = document.createElement('div');
         bg.className = 'merch-card__image-bg';
         imageWrap.appendChild(bg);
@@ -99,7 +100,7 @@ function createCard(product) {
 
     const image = document.createElement('img');
     image.className = `merch-card__image merch-card__image--${product.imageFit}`;
-    image.src = product.image;
+    image.src = getStore().getProductImage(product);
     image.alt = product.name;
     image.decoding = 'async';
     image.loading = 'lazy';

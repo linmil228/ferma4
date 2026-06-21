@@ -30,6 +30,7 @@ function createCartCard(product, quantity, setQuantity, getMaxQuantity, formatPr
     imageWrap.className = 'cart-card__image-wrap';
 
     if (product.imageBg) {
+        imageWrap.classList.add('cart-card__image-wrap--has-bg');
         const bg = document.createElement('div');
         bg.className = 'cart-card__image-bg';
         imageWrap.appendChild(bg);
@@ -37,8 +38,10 @@ function createCartCard(product, quantity, setQuantity, getMaxQuantity, formatPr
 
     const img = document.createElement('img');
     img.className = `cart-card__image cart-card__image--${product.imageFit}`;
-    img.src = product.image;
+    img.src = window.CartStore.getProductImage(product);
     img.alt = product.name;
+    img.loading = 'lazy';
+    img.decoding = 'async';
     imageWrap.appendChild(img);
     imageWrap.appendChild(createQuantityControl(product, quantity, setQuantity, getMaxQuantity, renderCart));
 
