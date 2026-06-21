@@ -1,0 +1,159 @@
+
+
+@media (max-width: 1919px) {
+    :root {
+        --nav-height: 3.125vw; 
+    }
+
+    nav {
+        height: var(--nav-height);
+        padding: 0.417vw 1.458vw; 
+        box-sizing: border-box;
+    }
+
+    nav > a img {
+        width: 5.417vw; 
+        height: auto;
+    }
+
+    .nav-sections {
+        gap: 3.385vw; 
+    }
+
+    .nav-section img {
+        height: 2.708vw; 
+        width: auto;
+    }
+}
+
+@media (max-width: 1536px) {
+    :root {
+        --nav-height: 3.906vw; 
+    }
+
+    nav {
+        padding: 0.521vw 1.823vw; 
+    }
+
+    nav > a img {
+        width: 5.417vw; 
+    }
+
+    .nav-sections {
+        gap: 3.385vw; 
+    }
+
+    .nav-section img {
+        height: 2.708vw; 
+    }
+}
+
+@media (max-width: 1200px) {
+    :root {
+        --nav-height: 5vw; 
+    }
+
+    nav {
+        padding: 0.667vw 2.333vw; 
+    }
+
+    nav > a img {
+        width: 7vw; 
+    }
+
+    .nav-sections {
+        gap: 3.385vw; 
+    }
+
+    .nav-section img {
+        height: 2.708vw; 
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --nav-height: 7.813vw; 
+    }
+
+    nav {
+        padding: 0.521vw 1.823vw; 
+    }
+
+    nav > a img {
+        width: 6vw; 
+    }
+
+    .nav-sections {
+        gap: 4.167vw; 
+    }
+
+    .nav-section img {
+        height: 2.708vw; 
+    }
+}
+
+@media (max-width: 430px) {
+    :root {
+        --nav-height: 13.953vw; 
+    }
+
+    nav {
+        position: relative;
+        z-index: 110;
+        padding: 0.93vw 3.488vw; 
+    }
+
+    nav > a img {
+        width: auto;
+        height: 6.977vw; 
+    }
+
+    .nav-burger {
+        display: flex;
+        width: 9.07vw; 
+        height: 7.209vw; 
+        flex-shrink: 0;
+    }
+
+    nav .nav-sections {
+        display: none;
+    }
+
+    body.nav-open {
+        overflow: hidden;
+    }
+
+    body.nav-open .nav-overlay {
+        display: block;
+    }
+
+    body.nav-open nav .nav-sections {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+        gap: 5.814vw; 
+        position: fixed;
+        top: var(--nav-height);
+        left: 0;
+        width: 100%;
+        height: calc(100vh - var(--nav-height));
+        min-height: calc(100dvh - var(--nav-height));
+        margin: 0;
+        padding: 4.651vw 3.488vw 3.488vw; 
+        background-color: var(--color-gray);
+        z-index: 100;
+        box-sizing: border-box;
+        overflow-y: auto;
+    }
+
+    body.nav-open .nav-section {
+        height: 16.279vw; 
+        flex-shrink: 0;
+    }
+
+    body.nav-open .nav-section img {
+        height: 16.279vw; 
+        width: auto;
+    }
+}

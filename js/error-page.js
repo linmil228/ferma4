@@ -3,20 +3,28 @@ const ERROR_ELEMENTS = Array.from(
     (_, i) => `assets/img/error-elements/e-element-${i + 1}.svg`
 );
 
-// ── Настройки размеров и поведения (меняй здесь) ──
+const ERROR_DESIGN_WIDTH = 1920;
+const ERROR_DESIGN_BANNER = 720;
+
 const ERROR_FLOAT_CONFIG = {
-    // Размер элемента относительно баннера: 0.45 = 45%, 1 = 100%
+
     sizeMin: 0.35,
     sizeMax: 0.4,
 
-    // Радиус появления вокруг баннера
     spawnRadiusFactor: 0.65,
     spawnRadiusExtra: 80,
 
-    // Сколько элементов появляется на странице
     countMin: 8,
     countMax: 8,
 };
+
+function getReferenceWidth() {
+    return Math.min(window.innerWidth, ERROR_DESIGN_WIDTH);
+}
+
+function getBannerReferenceSize() {
+    return ERROR_DESIGN_BANNER * (getReferenceWidth() / ERROR_DESIGN_WIDTH);
+}
 
 function shuffle(items) {
     const list = [...items];
@@ -34,15 +42,17 @@ function clamp(value, min, max) {
 function getPlayArea() {
     const nav = document.querySelector('nav');
     const footer = document.querySelector('footer');
+    const body = document.body;
     const navBottom = nav?.getBoundingClientRect().bottom ?? 60;
     const footerTop = footer?.getBoundingClientRect().top ?? window.innerHeight;
+    const bodyRect = body.getBoundingClientRect();
 
     return {
         top: navBottom,
         bottom: footerTop,
-        left: 0,
-        right: window.innerWidth,
-        width: window.innerWidth,
+        left: bodyRect.left,
+        right: bodyRect.right,
+        width: bodyRect.width,
         height: Math.max(0, footerTop - navBottom),
     };
 }
@@ -65,20 +75,36 @@ function initErrorPage() {
     const particles = [];
     let time = 0;
 
+    function getElementSize(bannerSize, randomFactor) {
+        return bannerSize * (
+            ERROR_FLOAT_CONFIG.sizeMin
+            + randomFactor * (ERROR_FLOAT_CONFIG.sizeMax - ERROR_FLOAT_CONFIG.sizeMin)
+        );
+    }
+
+    function applyParticleSize(particle, bannerSize) {
+        particle.size = getElementSize(bannerSize, particle.sizeRandom);
+        particle.el.style.width = `${particle.size}px`;
+    }
+
     requestAnimationFrame(() => {
         const bannerRect = banner.getBoundingClientRect();
-        const centerX = bannerRect.left + bannerRect.width / 2;
-        const centerY = bannerRect.top + bannerRect.height / 2;
-        const bannerSize = Math.max(bannerRect.width, bannerRect.height);
-        const spawnRadius = bannerSize * ERROR_FLOAT_CONFIG.spawnRadiusFactor + ERROR_FLOAT_CONFIG.spawnRadiusExtra;
+        const contentEl = document.querySelector('.error__content');
+        const contentRect = contentEl?.getBoundingClientRect();
+        const centerX = contentRect
+            ? contentRect.left + contentRect.width / 2
+            : bannerRect.left + bannerRect.width / 2;
+        const centerY = contentRect
+            ? contentRect.top + contentRect.height / 2
+            : bannerRect.top + bannerRect.height / 2;
+        const bannerSize = getBannerReferenceSize();
+        const spawnRadius = bannerSize * ERROR_FLOAT_CONFIG.spawnRadiusFactor + ERROR_FLOAT_CONFIG.spawnRadiusExtra * (getReferenceWidth() / ERROR_DESIGN_WIDTH);
         const playArea = getPlayArea();
 
         picked.forEach((src, index) => {
             const el = document.createElement('img');
-            const size = bannerSize * (
-                ERROR_FLOAT_CONFIG.sizeMin
-                + Math.random() * (ERROR_FLOAT_CONFIG.sizeMax - ERROR_FLOAT_CONFIG.sizeMin)
-            );
+            const sizeRandom = Math.random();
+            const size = getElementSize(bannerSize, sizeRandom);
 
             el.className = 'error-float';
             el.src = src;
@@ -101,6 +127,7 @@ function initErrorPage() {
                 rot: Math.random() * 360,
                 rotSpeed: (Math.random() - 0.5) * 0.12,
                 size,
+                sizeRandom,
                 phaseX: Math.random() * Math.PI * 2,
                 phaseY: Math.random() * Math.PI * 2,
                 driftAmp: 0.06 + Math.random() * 0.1,
@@ -117,7 +144,7 @@ function initErrorPage() {
                 particle.dragging = true;
                 particle.lastMoveX = event.clientX;
                 particle.lastMoveY = event.clientY;
-                el.classList.add('error-float--dragging');
+                el.classList.add('is-dragging');
                 el.setPointerCapture(event.pointerId);
             };
 
@@ -140,7 +167,7 @@ function initErrorPage() {
                 if (!particle.dragging) return;
 
                 particle.dragging = false;
-                el.classList.remove('error-float--dragging');
+                el.classList.remove('is-dragging');
                 el.releasePointerCapture(event.pointerId);
             };
 
@@ -211,7 +238,11 @@ function initErrorPage() {
 
         window.addEventListener('resize', () => {
             const area = getPlayArea();
-            particles.forEach((particle) => clampParticleToArea(particle, area));
+            const nextBannerSize = getBannerReferenceSize();
+            particles.forEach((particle) => {
+                applyParticleSize(particle, nextBannerSize);
+                clampParticleToArea(particle, area);
+            });
         });
 
         requestAnimationFrame(tick);

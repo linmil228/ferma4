@@ -15,13 +15,63 @@ const ORDER_PRODUCTS = [
 
 const SELECTION_WIDTH = 219;
 const SELECTION_HEIGHT = 202;
-const DESIGN_CAROUSEL_WIDTH = 1500;
+const SELECTION_TOP_OFFSET = 180;
+const DESIGN_CAROUSEL_WIDTH = 1200;
+
+const ORDER_STORAGE_KEY = 'ferma-order';
 
 const orderState = new Map();
 const orderSequence = [];
 
 function getProduct(id) {
     return ORDER_PRODUCTS.find((p) => p.id === id);
+}
+
+function loadPersistedOrder() {
+    try {
+        const raw = localStorage.getItem(ORDER_STORAGE_KEY);
+        if (!raw) return;
+
+        const parsed = JSON.parse(raw);
+        const state = parsed?.state;
+        const sequence = parsed?.sequence;
+
+        if (state && typeof state === 'object') {
+            Object.entries(state).forEach(([id, qty]) => {
+                const next = Number(qty);
+                if (getProduct(id) && next > 0) {
+                    orderState.set(id, Math.min(next, 99));
+                }
+            });
+        }
+
+        if (Array.isArray(sequence)) {
+            sequence.forEach((id) => {
+                if (getProduct(id) && getQuantity(id) > 0 && !orderSequence.includes(id)) {
+                    orderSequence.push(id);
+                }
+            });
+        }
+
+        for (const id of orderState.keys()) {
+            if (!orderSequence.includes(id)) {
+                orderSequence.push(id);
+            }
+        }
+    } catch {
+        orderState.clear();
+        orderSequence.length = 0;
+    }
+}
+
+function persistOrder() {
+    localStorage.setItem(
+        ORDER_STORAGE_KEY,
+        JSON.stringify({
+            state: Object.fromEntries(orderState),
+            sequence: [...orderSequence],
+        }),
+    );
 }
 
 function formatPrice(price) {
@@ -56,6 +106,7 @@ function setQuantity(id, quantity) {
         }
     }
 
+    persistOrder();
     window.dispatchEvent(new CustomEvent('order:updated'));
 }
 
@@ -81,10 +132,13 @@ function getTotalPrice() {
     return getItems().reduce((sum, item) => sum + item.product.price * item.quantity, 0);
 }
 
+loadPersistedOrder();
+
 window.OrderStore = {
     PRODUCTS: ORDER_PRODUCTS,
     SELECTION_WIDTH,
     SELECTION_HEIGHT,
+    SELECTION_TOP_OFFSET,
     DESIGN_CAROUSEL_WIDTH,
     getQuantity,
     setQuantity,

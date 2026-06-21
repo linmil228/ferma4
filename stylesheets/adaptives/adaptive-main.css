@@ -1,0 +1,442 @@
+
+
+@media (max-width: 1920px) {
+    html:has(main) main {
+        padding-left: 1.823vw; 
+    }
+
+    html:has(main) .box-color {
+        width: 55.26vw;
+        height: auto;
+        min-height: 48.333vw;
+        border-radius: 1.302vw;
+    }
+
+    html:has(main) .box-main {
+        width: 52.656vw;
+        height: auto;
+        min-height: 45.99vw;
+        border-width: 0.417vw;
+        border-radius: 1.042vw;
+        padding: 1.042vw 1.042vw 1.042vw;
+    }
+
+    html:has(main) .hero-stroke {
+        align-self: flex-start;
+    }
+
+    html:has(main) .stroke-text--hero {
+        --hero-font-size: 4.427vw;
+        --stroke-width: 0.376em;
+        --padding: 0.521vw;
+    }
+
+    html:has(main) .main-text {
+        gap: 0.99vw;
+    }
+
+    html:has(main) .colomn-marking {
+        gap: 0.99vw;
+    }
+
+    html:has(main) .year {
+        width: 13.802vw;
+        min-height: 4.74vw;
+        padding: 1.042vw 0;
+        font-size: 2.656vw;
+        border-radius: 1.302vw;
+        box-shadow: inset 0 0 0 0.417vw var(--color-gray);
+    }
+
+    html:has(main) .marking {
+        gap: 1.302vw;
+    }
+
+    html:has(main) .marking img {
+        height: 3.75vw;
+        width: auto;
+    }
+
+    html:has(main) .colomn-marking > img {
+        width: 100%;
+        height: auto;
+    }
+
+    html:has(main) .subtitle-counter {
+        font-size: 2.135vw;
+        min-height: 1.563vw;
+        height: auto;
+    }
+
+    html:has(main) .stroke-text--counter {
+        --counter-font-size: min(4.55vw, 9.8cqw);
+        --stroke-width: 0.121em;
+        white-space: nowrap;
+    }
+
+    html:has(main) .counter-container h4 {
+        min-height: 5.729vw;
+        overflow: visible;
+    }
+
+    html:has(main) .line {
+        width: calc(100% + 2.083vw);
+        height: 0.417vw;
+        margin-left: -1.042vw;
+    }
+}
+
+@media (max-width: 1536px) {
+    html:has(main) main {
+        background-image: url('../../assets/img/backgrounds/main-bg-1536.svg');
+        padding-left: 1.823vw; 
+    }
+
+    html:has(main) .box-color {
+        width: 55.273vw;
+        min-height: 43.164vw;
+        border-radius: 1.302vw;
+    }
+
+    html:has(main) .box-main {
+        width: 52.669vw;
+        min-height: 40.559vw;
+        border-width: 0.417vw;
+        border-radius: 1.042vw;
+    }
+
+    html:has(main) .stroke-text--hero {
+        --hero-font-size: 4.227vw;
+        --stroke-width: 0.376em;
+    }
+
+    html:has(main) .main-text {
+        gap: 1.15vw;
+    }
+
+    html:has(main) .colomn-marking {
+        gap: 1.15vw;
+    }
+
+    html:has(main) .year {
+        width: 12.85vw;
+        min-height: 4.48vw;
+        padding: 0.96vw 0;
+        font-size: 2.46vw;
+        border-radius: 1.13vw;
+        box-shadow: inset 0 0 0 0.417vw var(--color-gray);
+    }
+
+    html:has(main) .marking {
+        gap: 1.21vw;
+    }
+
+    html:has(main) .marking img {
+        height: 4.35vw;
+    }
+
+    html:has(main) .colomn-marking > img {
+        width: 92%;
+    }
+
+    html:has(main) .subtitle-counter {
+        font-size: 1.98vw;
+        min-height: 1.85vw;
+    }
+
+    html:has(main) .stroke-text--counter {
+        --counter-font-size: min(4.5vw, 8.3cqw);
+        --stroke-width: 0.108em;
+        white-space: nowrap;
+    }
+
+    html:has(main) .counter-container h4 {
+        min-height: 4.96vw;
+        overflow: visible;
+    }
+
+    html:has(main) .line {
+        height: 0.417vw;
+    }
+}
+
+@media (max-width: 1200px) {
+    html:has(main) main {
+        background-image: url('../../assets/img/backgrounds/main-bg-1200.svg');
+        padding-left: 1.917vw;
+    }
+
+    html:has(main) .box-color {
+        width: 59vw;
+        min-height: 57.583vw;
+        border-radius: 1.389vw;
+    }
+
+    html:has(main) .box-main {
+        width: 56.167vw;
+        min-height: 54.75vw;
+        border-width: 0.444vw;
+        border-radius: 1.111vw;
+        padding: 1.417vw;
+    }
+
+    html:has(main) .stroke-text--hero {
+        --hero-font-size: 4.256vw;
+        --stroke-width: 0.376em;
+    }
+
+    html:has(main) .main-text {
+        gap: 1.583vw;
+    }
+
+    html:has(main) .colomn-marking {
+        gap: 1.583vw;
+    }
+
+    html:has(main) .year {
+        width: 14.722vw;
+        min-height: 5.167vw;
+        padding: 1.111vw 0;
+        font-size: 2.822vw;
+        border-radius: 1.305vw;
+        box-shadow: inset 0 0 0 0.444vw var(--color-gray);
+    }
+
+    html:has(main) .marking {
+        gap: 1.389vw;
+    }
+
+    html:has(main) .marking img {
+        height: 4.994vw;
+    }
+
+    html:has(main) .subtitle-counter {
+        font-size: 2.267vw;
+        min-height: 2.083vw;
+    }
+
+    html:has(main) .stroke-text--counter {
+        --counter-font-size: min(5.25vw, 9.1cqw);
+        --stroke-width: 0.103em;
+        white-space: nowrap;
+    }
+
+    html:has(main) .counter-container h4 {
+        min-height: 6.25vw;
+        overflow: visible;
+    }
+
+    html:has(main) .line {
+        width: calc(100% + 2.222vw);
+        height: 0.444vw;
+        margin-left: -1.111vw;
+    }
+}
+
+@media (max-width: 768px) {
+    html:has(main) main {
+        background-image: url('../../assets/img/backgrounds/main-bg-768.svg');
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: auto;
+        min-height: calc(100vh - var(--nav-height));
+        padding: 2.344vw 1.953vw 5.208vw;
+        box-sizing: border-box;
+    }
+
+    html:has(main) .box-color {
+        width: 96.354vw;
+        height: auto;
+        min-height: 84.245vw;
+        margin-top: 0;
+        border-radius: 2.083vw;
+        flex-shrink: 0;
+    }
+
+    html:has(main) .box-main {
+        width: 91.797vw;
+        min-height: 80.208vw;
+        border-width: 0.726vw;
+        border-radius: 1.816vw;
+        padding: 2.269vw;
+    }
+
+    html:has(main) .hero-stroke {
+        align-self: stretch;
+    }
+
+    html:has(main) .stroke-text--hero {
+        --hero-font-size: 7.773vw;
+        --stroke-width: 0.376em;
+        --padding: 0.651vw;
+    }
+
+    html:has(main) .stroke-text--hero span {
+        white-space: normal;
+    }
+
+    html:has(main) .main-text {
+        gap: 2.083vw;
+    }
+
+    html:has(main) .colomn-marking {
+        gap: 2.083vw;
+    }
+
+    html:has(main) .year {
+        width: 24.066vw;
+        height: 8.446vw;
+        min-height: 8.446vw;
+        padding: 0;
+        font-size: 4.612vw;
+        border-radius: 2.133vw;
+        box-shadow: inset 0 0 0 0.726vw var(--color-gray);
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    html:has(main) .marking {
+        gap: 2.271vw;
+    }
+
+    html:has(main) .marking img {
+        height: 8.203vw;
+    }
+
+    html:has(main) .colomn-marking > img {
+        width: 100%;
+        height: auto;
+    }
+
+    html:has(main) .subtitle-counter {
+        font-size: 3.706vw;
+        min-height: 4.688vw;
+        line-height: 1.248;
+    }
+
+    html:has(main) .stroke-text--counter {
+        --counter-font-size: min(8.3vw, 10.3cqw);
+        --stroke-width: 0.12em;
+        white-space: nowrap;
+    }
+
+    html:has(main) .counter-container h4 {
+        min-height: 10.026vw;
+        overflow: visible;
+    }
+
+    html:has(main) .line {
+        width: calc(100% + 4.557vw);
+        height: 0.726vw;
+        margin-left: -2.279vw;
+    }
+}
+
+@media (max-width: 430px) {
+    html:has(main) main {
+        background-image: url('../../assets/img/backgrounds/main-bg-430.svg');
+        align-items: flex-start;
+        padding: 4.884vw 1.86vw 6.977vw;
+    }
+
+    html:has(main) .box-color {
+        width: 96.279vw;
+        min-height: 138.605vw;
+        border-radius: 2.272vw;
+    }
+
+    html:has(main) .box-main {
+        width: 91.628vw;
+        min-height: 133.953vw;
+        border-width: 0.726vw;
+        border-radius: 1.816vw;
+        padding: 2.326vw;
+    }
+
+    html:has(main) .hero-stroke__desktop {
+        display: none;
+    }
+
+    html:has(main) .hero-stroke__mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.791vw;
+        width: 100%;
+    }
+
+    html:has(main) .hero-stroke__title {
+        --hero-font-size: 20.233vw;
+        --stroke-width: 0.376em;
+        --padding: 0.465vw;
+        width: 100%;
+    }
+
+    html:has(main) .hero-stroke__subtitle {
+        --hero-font-size: 7.774vw;
+        --stroke-width: 0.359em;
+        --padding: 0.465vw;
+        width: 100%;
+    }
+
+    html:has(main) .main-text {
+        gap: 2.791vw;
+    }
+
+    html:has(main) .colomn-marking {
+        gap: 2.791vw;
+    }
+
+    html:has(main) .year {
+        width: 24.066vw;
+        height: 8.445vw;
+        min-height: 8.445vw;
+        padding: 0;
+        font-size: 4.612vw;
+        border-radius: 2.133vw;
+        box-shadow: inset 0 0 0 0.726vw var(--color-gray);
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    html:has(main) .marking {
+        gap: 2.271vw;
+    }
+
+    html:has(main) .marking img {
+        height: 8.163vw;
+    }
+
+    html:has(main) .colomn-marking > img {
+        width: 100%;
+        height: auto;
+    }
+
+    html:has(main) .subtitle-counter {
+        font-size: 3.706vw;
+        min-height: 4.651vw;
+        line-height: 1.248;
+    }
+
+    html:has(main) .stroke-text--counter {
+        --counter-font-size: min(8.5vw, 10.5cqw);
+        --stroke-width: 0.115em;
+        white-space: nowrap;
+    }
+
+    html:has(main) .counter-container h4 {
+        min-height: 10.116vw;
+        overflow: visible;
+    }
+
+    html:has(main) .line {
+        width: calc(100% + 4.651vw);
+        height: 0.726vw;
+        margin-left: -2.326vw;
+    }
+}

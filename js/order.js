@@ -5,6 +5,7 @@ const ROTATION_SPEED = 0.005;
 let rotation = 0;
 let animationId = null;
 let ringEl = null;
+let viewportEl = null;
 let itemEls = [];
 
 let listEl = null;
@@ -19,6 +20,7 @@ const carouselState = {
     rx: 0,
     ry: 0,
     scale: 1,
+    depthMul: 1,
 };
 
 function getStore() {
@@ -29,8 +31,21 @@ function getProduct(id) {
     return getStore().PRODUCTS.find((p) => p.id === id);
 }
 
+function getCarouselLayout(width) {
+    if (width <= 430) {
+        return { radiusX: 0.28, radiusY: 0.24, depthMul: 0.5 };
+    }
+    if (width <= 768) {
+        return { radiusX: 0.31, radiusY: 0.27, depthMul: 0.68 };
+    }
+    if (width <= 1200) {
+        return { radiusX: 0.33, radiusY: 0.285, depthMul: 0.85 };
+    }
+    return { radiusX: CAROUSEL_RADIUS_X, radiusY: CAROUSEL_RADIUS_Y, depthMul: 1 };
+}
+
 function applyItemSize(el, product, scale) {
-    const { SELECTION_WIDTH, SELECTION_HEIGHT } = getStore();
+    const { SELECTION_WIDTH, SELECTION_HEIGHT, SELECTION_TOP_OFFSET } = getStore();
     const selection = el._selectionEl;
 
     const fruitW = product.width * scale;
@@ -42,6 +57,7 @@ function applyItemSize(el, product, scale) {
     if (selection) {
         selection.style.width = `${SELECTION_WIDTH * scale}px`;
         selection.style.height = `${SELECTION_HEIGHT * scale}px`;
+        selection.style.top = `${fruitH - SELECTION_TOP_OFFSET * scale}px`;
     }
 }
 
@@ -49,10 +65,13 @@ function updateCarouselGeometry() {
     if (!ringEl || !itemEls.length) return;
 
     const rect = ringEl.getBoundingClientRect();
+    const layout = getCarouselLayout(rect.width);
+
     carouselState.cx = rect.width / 2;
     carouselState.cy = rect.height / 2;
-    carouselState.rx = rect.width * CAROUSEL_RADIUS_X;
-    carouselState.ry = rect.height * CAROUSEL_RADIUS_Y;
+    carouselState.rx = rect.width * layout.radiusX;
+    carouselState.ry = rect.height * layout.radiusY;
+    carouselState.depthMul = layout.depthMul;
     carouselState.scale = rect.width / getStore().DESIGN_CAROUSEL_WIDTH;
 
     const store = getStore();
@@ -75,9 +94,10 @@ function updateCarouselPositions() {
         const y = cy + Math.sin(angle) * ry;
 
         const sinA = Math.sin(angle);
-        let depth = sinA * 8000 + y * 4;
+        const depthMul = carouselState.depthMul;
+        let depth = sinA * 8000 * depthMul + y * 4 * depthMul;
         if (Math.abs(sinA) < 0.45) {
-            depth += Math.cos(angle) * angle * 80;
+            depth += Math.cos(angle) * angle * 80 * depthMul;
         }
 
         const z = Math.round(10000 + depth) + index;
@@ -121,7 +141,7 @@ function updateCarouselItemSelection(productId, selected) {
     const el = itemEls.find((item) => item.dataset.productId === productId);
     if (!el) return;
 
-    el.classList.toggle('order-item--selected', selected);
+    el.classList.toggle('is-selected', selected);
     el.setAttribute('aria-pressed', String(selected));
 }
 
@@ -129,7 +149,7 @@ function updateCarouselSelectionAll() {
     const { has } = getStore();
     itemEls.forEach((el) => {
         const selected = has(el.dataset.productId);
-        el.classList.toggle('order-item--selected', selected);
+        el.classList.toggle('is-selected', selected);
         el.setAttribute('aria-pressed', String(selected));
     });
 }
@@ -152,9 +172,9 @@ function stopCarouselAnimation() {
 }
 
 function initCarousel() {
-    const viewport = document.querySelector('.order-carousel__viewport');
+    viewportEl = document.querySelector('.order-carousel__viewport');
     const store = getStore();
-    if (!viewport || !store) return;
+    if (!viewportEl || !store) return;
 
     ringEl = document.createElement('div');
     ringEl.className = 'order-carousel__ring';
@@ -165,12 +185,12 @@ function initCarousel() {
         return el;
     });
 
-    viewport.appendChild(ringEl);
+    viewportEl.appendChild(ringEl);
 
     const resizeObserver = new ResizeObserver(() => {
         updateCarouselGeometry();
     });
-    resizeObserver.observe(ringEl);
+    resizeObserver.observe(viewportEl);
 
     updateCarouselGeometry();
     updateCarouselSelectionAll();

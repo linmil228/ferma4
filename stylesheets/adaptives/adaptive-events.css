@@ -1,0 +1,327 @@
+
+
+@media (max-width: 1920px) {
+    .events {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .event-card {
+        --card-pad: 1.042vw;
+        --title-pad-left: calc(var(--card-pad) + 5px);
+        --title-size: 2.813vw;
+        --date-size: 2.865vw;
+        --date-w: 9.427vw;
+        --date-h: 3.542vw;
+    }
+
+}
+
+@media (max-width: 1536px) {
+    .events__board {
+        padding-bottom: 44.792vw;
+
+    }
+
+    .event-card {
+        --card-pad: 1.042vw;
+        --title-pad-left: calc(var(--card-pad) + 5px);
+        --title-size: 2.344vw; 
+        --date-size: 2.865vw;
+        --date-w: 9.427vw;
+        --date-h: 3.542vw;
+    }
+
+    .event-card--podium {
+        left: 18.33%;
+        top: 18.2%;
+        width: 20.83%;
+        height: 38.25%;
+    }
+
+    .event-card--festival {
+        left: 49.74%;
+        top: 21.9%;
+        width: 20.83%;
+        height: 32.21%;
+        transform: rotate(14deg);
+    }
+
+    .event-card--zine {
+        left: 85.1%;
+        top: 18.2%;
+        width: 10.42%;
+        height: 79.3%;
+    }
+
+    .event-card--lecture {
+        left: 4.22%;
+        top: 59.24%;
+        width: 20.83%;
+        height: 38.25%;
+    }
+
+    .event-card--masterclass {
+        left: 27.71%;
+        top: 59.24%;
+        width: 31.25%;
+        height: 38.25%;
+    }
+
+    .event-card--poster {
+        left: 61.61%;
+        top: 65.3%;
+        width: 20.83%;
+        height: 32.21%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .events__board {
+        padding-bottom: 59.375vw;
+
+    }
+
+    .event-card {
+        --card-pad: 1.042vw;
+        --title-size: 2.083vw; 
+        --date-size: 2.866vw;
+        --date-w: 9.427vw;
+        --date-h: 3.542vw;
+    }
+
+    .event-card--podium {
+        left: 18.33%;
+        top: 37.6%;
+        width: 20.83%;
+        height: 28.86%;
+    }
+
+    .event-card--festival {
+        left: 49.74%;
+        top: 40.4%;
+        width: 20.83%;
+        height: 24.3%;
+        transform: rotate(14deg);
+    }
+
+    .event-card--zine {
+        left: 85.1%;
+        top: 37.6%;
+        width: 10.42%;
+        height: 59.8%;
+    }
+
+    .event-card--lecture {
+        left: 4.22%;
+        top: 68.6%;
+        width: 20.83%;
+        height: 28.86%;
+    }
+
+    .event-card--masterclass {
+        left: 27.71%;
+        top: 68.6%;
+        width: 31.25%;
+        height: 28.86%;
+    }
+
+    .event-card--poster {
+        left: 61.61%;
+        top: 73.2%;
+        width: 20.83%;
+        height: 24.3%;
+    }
+}
+
+@media (max-width: 768px) {
+    .events {
+        min-height: auto;
+        background-image: url(../../assets/img/backgrounds/events-bg-768.svg);
+    }
+
+    .events__stage {
+        max-width: 100%;
+    }
+
+    .events__board {
+        padding-bottom: 125.521vw;
+
+    }
+
+    .event-card {
+        --card-pad: 1.042vw;
+        --title-size: 4.167vw;
+        --date-size: 4.948vw;
+        --date-w: 15.885vw;
+        --date-h: 5.99vw;
+    }
+
+    .event-card--podium {
+        left: 6.77%;
+        top: 50%;
+        width: 35.57%;
+        height: 23.31%;
+    }
+
+    .event-card--festival {
+        left: 45.7%;
+        top: 55.1%;
+        width: 35.57%;
+        height: 19.63%;
+        transform: rotate(14deg);
+    }
+
+    .event-card--zine {
+        left: 84.24%;
+        top: 48.24%;
+        width: 10.81%;
+        height: 51.04%;
+    }
+
+    .event-card--lecture {
+        left: 2.47%;
+        top: 74.17%;
+        width: 21.74%;
+        height: 25.1%;
+    }
+
+    .event-card--masterclass {
+        left: 24.48%;
+        top: 78.42%;
+        width: 32.55%;
+        height: 20.85%;
+    }
+
+    .event-card--masterclass .event-card__title {
+        bottom: auto;
+        top: 49.75%;
+        max-width: calc(100% - var(--title-pad-left) - var(--card-pad));
+    }
+
+    .event-card--poster {
+        left: 59.77%;
+        top: 82.05%;
+        width: 21.61%;
+        height: 17.22%;
+    }
+
+    .event-card--poster .event-card__title {
+        bottom: var(--card-pad);
+        top: auto;
+    }
+}
+
+@media (max-width: 430px) {
+    .events {
+        min-height: auto;
+        display: block;
+        align-items: stretch;
+        background-image: url(../../assets/img/backgrounds/events-bg-430.svg);
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: center top;
+    }
+
+    .events__stage {
+        max-width: 100%;
+        padding-bottom: 3px;
+    }
+
+    .events__board {
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 2.791vw;
+        padding: 15.349vw 15.116vw 9.302vw;
+        box-sizing: border-box;
+        height: auto;
+        padding-bottom: 9.302vw;
+    }
+
+    .event-card {
+        position: relative;
+        left: auto;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        transform: none;
+        overflow: hidden;
+        --card-pad: 2.326vw;
+        --title-pad-left: calc(var(--card-pad) + 5px);
+        --title-size: 8.605vw;
+        --date-size: 9.302vw;
+        --date-w: 31.163vw;
+        --date-h: 11.628vw;
+    }
+
+    .event-card--podium,
+    .event-card--festival,
+    .event-card--zine,
+    .event-card--lecture,
+    .event-card--masterclass,
+    .event-card--poster {
+        left: auto;
+        top: auto;
+        width: auto;
+        height: auto;
+    }
+
+    .event-card__date {
+        padding-left: 2.326vw;
+    }
+
+    .event-card__date--vertical {
+        padding: 0;
+        padding-bottom: 2.326vw;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .event-card--podium {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        aspect-ratio: 299 / 246;
+    }
+
+    .event-card--lecture {
+        grid-column: 1;
+        grid-row: 2;
+        aspect-ratio: 189 / 273;
+    }
+
+    .event-card--zine {
+        grid-column: 2;
+        grid-row: 2 / 4;
+        width: 21.86vw;
+        aspect-ratio: 94 / 560;
+    }
+
+    .event-card--poster {
+        grid-column: 1;
+        grid-row: 3;
+        aspect-ratio: 189 / 274;
+    }
+
+    .event-card--festival {
+        grid-column: 1 / -1;
+        grid-row: 4;
+        aspect-ratio: 299 / 207;
+        transform: none;
+    }
+
+    .event-card--masterclass {
+        grid-column: 1 / -1;
+        grid-row: 5;
+        aspect-ratio: 299 / 240;
+    }
+
+    .event-card--masterclass .event-card__title {
+        bottom: auto;
+        top: 50%;
+        max-width: calc(100% - var(--title-pad-left) - var(--card-pad));
+    }
+}

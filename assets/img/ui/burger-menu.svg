@@ -1,0 +1,40 @@
+<svg width="39" height="31" viewBox="0 0 39 31" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<use xlink:href="#stroke0_267_470" transform="scale(0.238095)"/>
+<use xlink:href="#stroke0_267_470" transform="translate(4.75) scale(0.238095)"/>
+<use xlink:href="#stroke0_267_470" transform="translate(9.5) scale(0.238095)"/>
+<use xlink:href="#stroke0_267_470" transform="translate(14.25) scale(0.238095)"/>
+<use xlink:href="#stroke0_267_470" transform="translate(19) scale(0.238095)"/>
+<use xlink:href="#stroke0_267_470" transform="translate(23.75) scale(0.238095)"/>
+<use xlink:href="#stroke0_267_470" transform="translate(28.5) scale(0.238095)"/>
+<use xlink:href="#stroke0_267_470" transform="translate(33.25) scale(0.238095)"/>
+<use xlink:href="#stroke1_267_470" transform="translate(0 12.6943) scale(0.238095)"/>
+<use xlink:href="#stroke1_267_470" transform="translate(4.75 12.6943) scale(0.238095)"/>
+<use xlink:href="#stroke1_267_470" transform="translate(9.5 12.6943) scale(0.238095)"/>
+<use xlink:href="#stroke1_267_470" transform="translate(14.25 12.6943) scale(0.238095)"/>
+<use xlink:href="#stroke1_267_470" transform="translate(19 12.6943) scale(0.238095)"/>
+<use xlink:href="#stroke1_267_470" transform="translate(23.75 12.6943) scale(0.238095)"/>
+<use xlink:href="#stroke1_267_470" transform="translate(28.5 12.6943) scale(0.238095)"/>
+<use xlink:href="#stroke1_267_470" transform="translate(33.25 12.6943) scale(0.238095)"/>
+<use xlink:href="#stroke2_267_470" transform="translate(0 25.3889) scale(0.238095)"/>
+<use xlink:href="#stroke2_267_470" transform="translate(4.75 25.3889) scale(0.238095)"/>
+<use xlink:href="#stroke2_267_470" transform="translate(9.5 25.3889) scale(0.238095)"/>
+<use xlink:href="#stroke2_267_470" transform="translate(14.25 25.3889) scale(0.238095)"/>
+<use xlink:href="#stroke2_267_470" transform="translate(19 25.3889) scale(0.238095)"/>
+<use xlink:href="#stroke2_267_470" transform="translate(23.75 25.3889) scale(0.238095)"/>
+<use xlink:href="#stroke2_267_470" transform="translate(28.5 25.3889) scale(0.238095)"/>
+<use xlink:href="#stroke2_267_470" transform="translate(33.25 25.3889) scale(0.238095)"/>
+<defs>
+<g id="stroke0_267_470" data-figma-scatter-ref="stroke0_267_470_ref" data-figma-scatter="f0.95_w0_aj0_sj0_r0_s8050537362932087570_sw5">
+<path d="M10.5 0C16.299 0 21 4.70101 21 10.5C21 16.299 16.299 21 10.5 21C4.70101 21 0 16.299 0 10.5C0 4.70101 4.70101 0 10.5 0Z" fill="#FFE45A"/>
+</g>
+<path id="stroke0_267_470_ref" d="M2.5 2.5H35.8232"/>
+<g id="stroke1_267_470" data-figma-scatter-ref="stroke1_267_470_ref" data-figma-scatter="f0.95_w0_aj0_sj0_r0_s2127057719738653915_sw5">
+<path d="M10.5 0C16.299 0 21 4.70101 21 10.5C21 16.299 16.299 21 10.5 21C4.70101 21 0 16.299 0 10.5C0 4.70101 4.70101 0 10.5 0Z" fill="#FFE45A"/>
+</g>
+<path id="stroke1_267_470_ref" d="M2.5 15.1943H35.8232"/>
+<g id="stroke2_267_470" data-figma-scatter-ref="stroke2_267_470_ref" data-figma-scatter="f0.95_w0_aj0_sj0_r0_s3122389116727712330_sw5">
+<path d="M10.5 0C16.299 0 21 4.70101 21 10.5C21 16.299 16.299 21 10.5 21C4.70101 21 0 16.299 0 10.5C0 4.70101 4.70101 0 10.5 0Z" fill="#FFE45A"/>
+</g>
+<path id="stroke2_267_470_ref" d="M2.5 27.8889H35.8232"/>
+</defs>
+</svg>

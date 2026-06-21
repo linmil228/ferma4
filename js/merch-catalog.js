@@ -50,7 +50,7 @@ function createQuantityControl(product) {
     plusBtn.type = 'button';
     plusBtn.className = 'merch-card__quantity-btn clickable';
     if (atMax) {
-        plusBtn.classList.add('merch-card__quantity-btn--disabled');
+        plusBtn.classList.add('is-disabled');
         plusBtn.disabled = true;
     }
     plusBtn.textContent = '+';
@@ -101,6 +101,8 @@ function createCard(product) {
     image.className = `merch-card__image merch-card__image--${product.imageFit}`;
     image.src = product.image;
     image.alt = product.name;
+    image.decoding = 'async';
+    image.loading = 'lazy';
     imageWrap.appendChild(image);
 
     const footer = document.createElement('div');

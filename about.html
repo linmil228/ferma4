@@ -4,38 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/ui/favicon.svg" type="image/svg+xml">
     <title>ferma</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
     <script src="js/cart-store.js" defer></script>
     <script src="js/cart-nav.js" defer></script>
+    <script src="js/nav-menu.js" defer></script>
 </head>
 
 <body>
     <nav>
         <a href="./index.html" class="clickable">
-            <img src="assets/img/logo.svg">
+            <img src="assets/img/ui/logo.svg">
         </a>
-        <div class="nav-sections">
+        <div class="nav-sections" id="nav-mobile-panel">
             <a href="./about.html" class="nav-section clickable">
-                <img class="default-nav" src="assets/img/about-active.svg">
-                <img class="active-nav" src="assets/img/about-active.svg">
+                <img class="default-nav" src="assets/img/ui/about-active.svg">
+                <img class="active-nav" src="assets/img/ui/about-active.svg">
             </a>
             <a href="./merch.html" class="nav-section clickable">
-                <img class="default-nav" src="assets/img/merch.svg">
-                <img class="active-nav" src="assets/img/merch-active.svg">
+                <img class="default-nav" src="assets/img/ui/merch.svg">
+                <img class="active-nav" src="assets/img/ui/merch-active.svg">
             </a>
             <a href="./order.html" class="nav-section clickable">
-                <img class="default-nav" src="assets/img/order.svg">
-                <img class="active-nav" src="assets/img/order-active.svg">
+                <img class="default-nav" src="assets/img/ui/order.svg">
+                <img class="active-nav" src="assets/img/ui/order-active.svg">
             </a>
             <a href="./events.html" class="nav-section clickable">
-                <img class="default-nav" src="assets/img/events.svg">
-                <img class="active-nav" src="assets/img/events-active.svg">
+                <img class="default-nav" src="assets/img/ui/events.svg">
+                <img class="active-nav" src="assets/img/ui/events-active.svg">
             </a>
         </div>
+        <button type="button" class="nav-burger clickable" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav-mobile-panel">
+            <img src="assets/img/ui/burger-menu.svg" alt="">
+        </button>
     </nav>
+    <div class="nav-overlay" aria-hidden="true"></div>
     <section class="header-section-about">
         <div class="info-about-title">
+            <img class="info-about-title__banner info-about-title__banner--768" src="assets/img/banners/about-banner-768.svg" alt="">
+            <img class="info-about-title__banner info-about-title__banner--430" src="assets/img/banners/about-banner-430.svg" alt="">
         </div>
         <div class="info-text">
             <h6 class="stroke-text stroke-text--about-first-type"
@@ -103,48 +111,43 @@
         </div>
     </section>
     <section class="zine-interactive">
-        <section class="zine-interactive">
-            <div class="zine-interactive__content">
-                <button type="button" class="tab yellow-tab left-tab clickable" id="zine-interactive-tab-1"
-                    data-page="0" aria-label="Страница 1"></button>
-                <button type="button" class="tab gray-tab left-tab clickable" id="zine-interactive-tab-2" data-page="1"
-                    aria-label="Страница 2"></button>
-                <button type="button" class="tab yellow-tab left-tab clickable" id="zine-interactive-tab-3"
-                    data-page="2" aria-label="Страница 3"></button>
-                <button type="button" class="tab gray-tab left-tab clickable" id="zine-interactive-tab-4" data-page="3"
-                    aria-label="Страница 4"></button>
+        <div class="zine-interactive__content">
+            <button type="button" class="tab yellow-tab left-tab clickable" id="zine-interactive-tab-1"
+                data-page="0" aria-label="Страница 1"></button>
+            <button type="button" class="tab gray-tab left-tab clickable" id="zine-interactive-tab-2" data-page="1"
+                aria-label="Страница 2"></button>
+            <button type="button" class="tab yellow-tab left-tab clickable" id="zine-interactive-tab-3"
+                data-page="2" aria-label="Страница 3"></button>
+            <button type="button" class="tab gray-tab left-tab clickable" id="zine-interactive-tab-4" data-page="3"
+                aria-label="Страница 4"></button>
 
-                <button type="button" class="tab gray-tab right-tab clickable" id="zine-interactive-tab-5" data-page="4"
-                    aria-label="Страница 5"></button>
-                <button type="button" class="tab yellow-tab right-tab clickable" id="zine-interactive-tab-6"
-                    data-page="5" aria-label="Страница 6"></button>
-                <button type="button" class="tab gray-tab right-tab clickable" id="zine-interactive-tab-7" data-page="6"
-                    aria-label="Страница 7"></button>
-                <button type="button" class="tab yellow-tab right-tab clickable" id="zine-interactive-tab-8"
-                    data-page="7" aria-label="Страница 8"></button>
+            <button type="button" class="tab gray-tab right-tab clickable" id="zine-interactive-tab-5" data-page="4"
+                aria-label="Страница 5"></button>
+            <button type="button" class="tab yellow-tab right-tab clickable" id="zine-interactive-tab-6"
+                data-page="5" aria-label="Страница 6"></button>
+            <button type="button" class="tab gray-tab right-tab clickable" id="zine-interactive-tab-7" data-page="6"
+                aria-label="Страница 7"></button>
+            <button type="button" class="tab yellow-tab right-tab clickable" id="zine-interactive-tab-8"
+                data-page="7" aria-label="Страница 8"></button>
 
-                <div class="zine-page">
-                    <div class="zine-page__backdrop" aria-hidden="true"></div>
-                    <div class="zine-page__stage" id="zine-page-stage">
-                        <img class="zine-page__image" id="zine-page-image" src="assets/img/zine-first.svg"
-                            alt="Страница журнала">
-                    </div>
+            <div class="zine-page">
+                <div class="zine-page__backdrop" aria-hidden="true"></div>
+                <div class="zine-page__stage" id="zine-page-stage">
+                    <img class="zine-page__image" id="zine-page-image" src="assets/img/zine/zine-first.svg"
+                        alt="Страница журнала">
                 </div>
             </div>
-        </section>
-
-        <script src="js/zine-interactive.js" defer></script>
-
+        </div>
     </section>
 
     <script src="js/zine-interactive.js" defer></script>
     <footer>
         <div class="left-footer">
             <div class="contacts">
-                <img src="assets/img/logo-footer.svg">
+                <img src="assets/img/ui/logo-footer.svg">
                 <p>+7 912 345 67 89</p>
             </div>
-            <img src="assets/img/barcode-footer.png">
+            <img src="assets/img/ui/barcode-footer.png">
         </div>
         <div class="right-footer">
             <div class="footer-links">

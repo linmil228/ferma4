@@ -16,6 +16,9 @@ function renderCart() {
     });
 
     totalEl.textContent = formatPrice(getTotalPrice());
+
+    const payBtn = document.querySelector('.cart__pay-btn');
+    if (payBtn) payBtn.disabled = items.length === 0;
 }
 
 function createCartCard(product, quantity, setQuantity, getMaxQuantity, formatPrice) {
@@ -80,7 +83,7 @@ function createQuantityControl(product, quantity, setQuantity, getMaxQuantity, o
     plus.setAttribute('aria-label', 'Увеличить количество');
     if (atMax) {
         plus.disabled = true;
-        plus.classList.add('cart-card__quantity-btn--disabled');
+        plus.classList.add('is-disabled');
     }
 
     minus.addEventListener('click', () => {
@@ -102,6 +105,7 @@ function createQuantityControl(product, quantity, setQuantity, getMaxQuantity, o
 function initCartPayButton() {
     const payBtn = document.querySelector('.cart__pay-btn');
     payBtn?.addEventListener('click', () => {
+        if (payBtn.disabled) return;
         window.location.href = 'error.html';
     });
 }

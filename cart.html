@@ -4,63 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/cart-nav-init.js"></script>
+    <link rel="icon" href="assets/img/ui/favicon.svg" type="image/svg+xml">
+    <title>ferma</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
     <script src="js/cart-store.js" defer></script>
-    <script>
-        (function () {
-            try {
-                var raw = localStorage.getItem('ferma-cart');
-                var cart = raw ? JSON.parse(raw) : {};
-                var hasItems = Object.keys(cart).some(function (id) {
-                    return (cart[id] || 0) > 0;
-                });
-                document.documentElement.classList.toggle('cart-has-items', hasItems);
-            } catch (e) {}
-        })();
-        </script>
-        
-        <style>
-        .footer-links [data-cart-link] { display: none !important; }
-        html.cart-has-items .footer-links [data-cart-link] { display: block !important; }
-        nav [data-cart-link].nav-section { display: none !important; }
-        html.cart-has-items nav [data-cart-link].nav-section { display: inline-block !important; }
-        </style>
-        
-        <link rel="stylesheet" href="stylesheets/style.css" />
-        <script src="js/cart-store.js" defer></script>
-        <script src="js/cart-nav.js" defer></script>
-    <title>ferma</title>
+    <script src="js/cart-nav.js" defer></script>
+    <script src="js/nav-menu.js" defer></script>
+    <script src="js/cart.js" defer></script>
 </head>
 
 <body>
     <nav>
         <a href="./index.html" class="clickable">
-            <img src="assets/img/logo.svg">
+            <img src="assets/img/ui/logo.svg">
         </a>
-        <div class="nav-sections">
+        <div class="nav-sections" id="nav-mobile-panel">
             <a href="./about.html" class="nav-section clickable">
-                <img class="default-nav" src="assets/img/about.svg">
-                <img class="active-nav" src="assets/img/about-active.svg">
+                <img class="default-nav" src="assets/img/ui/about.svg">
+                <img class="active-nav" src="assets/img/ui/about-active.svg">
             </a>
             <a href="./merch.html" class="nav-section clickable">
-                <img class="default-nav" src="assets/img/merch.svg">
-                <img class="active-nav" src="assets/img/merch-active.svg">
+                <img class="default-nav" src="assets/img/ui/merch.svg">
+                <img class="active-nav" src="assets/img/ui/merch-active.svg">
             </a>
             <a href="./order.html" class="nav-section clickable">
-                <img class="default-nav" src="assets/img/order.svg">
-                <img class="active-nav" src="assets/img/order-active.svg">
+                <img class="default-nav" src="assets/img/ui/order.svg">
+                <img class="active-nav" src="assets/img/ui/order-active.svg">
             </a>
             <a href="./events.html" class="nav-section clickable">
-                <img class="default-nav" src="assets/img/events.svg">
-                <img class="active-nav" src="assets/img/events-active.svg">
+                <img class="default-nav" src="assets/img/ui/events.svg">
+                <img class="active-nav" src="assets/img/ui/events-active.svg">
             </a>
             <a href="./cart.html" class="nav-section clickable" data-cart-link>
-                <img class="default-nav" src="assets/img/cart-active.svg">
-                <img class="active-nav" src="assets/img/cart-active.svg">
+                <img class="default-nav" src="assets/img/ui/cart-active.svg">
+                <img class="active-nav" src="assets/img/ui/cart-active.svg">
             </a>
         </div>
+        <button type="button" class="nav-burger clickable" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav-mobile-panel">
+            <img src="assets/img/ui/burger-menu.svg" alt="">
+        </button>
     </nav>
+    <div class="nav-overlay" aria-hidden="true"></div>
     <section class="cart">
         <div class="cart__inner">
             <div class="cart__grid"></div>
@@ -68,19 +52,17 @@
         <div class="cart__checkout-wrap">
             <div class="cart__checkout">
                 <p class="cart__total">0 ₽</p>
-                <button type="button" class="cart__pay-btn clickable">Оплата</button>
+                <button type="button" class="cart__pay-btn clickable" disabled>Оплата</button>
             </div>
         </div>
     </section>
-    <script src="js/cart-store.js" defer></script>
-    <script src="js/cart.js" defer></script>
     <footer>
         <div class="left-footer">
             <div class="contacts">
-                <img src="assets/img/logo-footer.svg">
+                <img src="assets/img/ui/logo-footer.svg">
                 <p>+7 912 345 67 89</p>
             </div>
-            <img src="assets/img/barcode-footer.png">
+            <img src="assets/img/ui/barcode-footer.png">
         </div>
         <div class="right-footer">
             <div class="footer-links">

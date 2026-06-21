@@ -1,0 +1,270 @@
+
+
+@media (max-width: 1919px) {
+    footer {
+        height: 20.781vw; 
+        padding: 0 2.083vw; 
+        box-sizing: border-box;
+    }
+
+    .left-footer {
+        padding: 1.042vw 0 1.406vw; 
+    }
+
+    .contacts {
+        gap: 0.677vw; 
+    }
+
+    .contacts img {
+        width: 22.396vw; 
+    }
+
+    .left-footer > img {
+        width: 23.438vw; 
+    }
+
+    .left-footer p {
+        font-size: 2.24vw; 
+    }
+
+    .footer-links {
+        gap: 5.469vw; 
+        padding: 2.083vw 0; 
+    }
+
+    .footer-links a {
+        font-size: 2.24vw; 
+    }
+
+    .name {
+        gap: 4.844vw; 
+        padding: 1.406vw 0; 
+    }
+
+    .right-footer p {
+        font-size: 1.458vw; 
+    }
+}
+
+@media (max-width: 1536px) {
+    footer {
+        height: 20.792vw; 
+        padding: 0 2.109vw; 
+    }
+
+    .left-footer {
+        padding: 0.865vw 0 1.419vw; 
+    }
+
+    .contacts {
+        gap: 0.684vw; 
+    }
+
+    .contacts img {
+        width: 22.396vw; 
+    }
+
+    .left-footer > img {
+        width: 25.911vw; 
+    }
+
+    .left-footer p {
+        font-size: 2.24vw; 
+    }
+
+    .footer-links {
+        gap: 5.466vw; 
+        padding: 2.083vw 0; 
+    }
+
+    .footer-links a {
+        font-size: 2.302vw; 
+    }
+
+    .name {
+        gap: 4.409vw; 
+        padding: 1.302vw 0; 
+    }
+
+    .right-footer p {
+        font-size: 1.458vw; 
+    }
+}
+
+@media (max-width: 1200px) {
+    footer {
+        height: 20.782vw; 
+        padding: 0 2.146vw; 
+    }
+
+    .left-footer {
+        padding: 0.833vw 0 1.608vw; 
+    }
+
+    .contacts {
+        gap: 0.667vw; 
+    }
+
+    .contacts img {
+        width: 22.396vw; 
+    }
+
+    .left-footer > img {
+        width: 29.333vw; 
+    }
+
+    .left-footer p {
+        font-size: 2.24vw; 
+    }
+
+    .footer-links {
+        gap: 5.461vw; 
+        padding: 1.667vw 0; 
+    }
+
+    .footer-links a {
+        font-size: 2.385vw; 
+    }
+
+    .name {
+        gap: 3.792vw; 
+        padding: 1.292vw 0; 
+    }
+
+    .right-footer p {
+        font-size: 1.458vw; 
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        height: auto;
+        min-height: 20.781vw; 
+        padding: 0 2.24vw; 
+    }
+
+    .left-footer {
+        padding: 0.99vw 0 1.693vw; 
+    }
+
+    .contacts {
+        gap: 0.651vw; 
+    }
+
+    .contacts img {
+        width: 22.396vw; 
+    }
+
+    .left-footer > img {
+        width: 38.177vw; 
+    }
+
+    .left-footer p {
+        font-size: 2.24vw; 
+    }
+
+    .footer-links {
+        gap: 5.448vw; 
+        padding: 2.24vw 0 0; 
+        flex-wrap: wrap;
+        row-gap: 1.042vw;
+    }
+
+    .footer-links a {
+        font-size: 2vw; 
+        white-space: nowrap;
+    }
+
+    .name {
+        gap: 2.214vw; 
+        padding: 0 0 1.693vw; 
+        flex-wrap: wrap;
+    }
+
+    .right-footer p {
+        font-size: 1.458vw; 
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 430px) {
+    footer {
+        display: grid;
+        grid-template-columns: minmax(0, 188fr) minmax(0, 217fr);
+        grid-template-rows: auto 1fr;
+        align-items: start;
+        height: auto;
+        min-height: 51.628vw; 
+        padding: 2.093vw 2.558vw; 
+        box-sizing: border-box;
+    }
+
+    .left-footer,
+    .right-footer,
+    .contacts {
+        display: contents;
+    }
+
+    .contacts img {
+        grid-column: 1;
+        grid-row: 1;
+        width: 43.834vw; 
+        max-width: 188.489px;
+        height: auto;
+    }
+
+    .footer-links {
+        grid-column: 1;
+        grid-row: 2;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.163vw; 
+        padding: 2.326vw 0 0; 
+        margin: 0;
+    }
+
+    .footer-links a {
+        font-size: 4.186vw; 
+        line-height: 1.248;
+        white-space: nowrap;
+    }
+
+    .contacts p {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: end;
+        align-self: start;
+        margin: 1.86vw 0 0; 
+        text-align: right;
+        font-size: 3.488vw; 
+        line-height: 1.248;
+    }
+
+    .name {
+        grid-column: 2;
+        grid-row: 2;
+        align-self: end;
+        justify-self: end;
+        justify-content: flex-end;
+        gap: 9.302vw; 
+        padding: 0;
+        margin: 0 0 7.442vw; 
+        flex-wrap: nowrap;
+    }
+
+    .name p {
+        font-size: 2.326vw; 
+        line-height: 1.248;
+        white-space: nowrap;
+    }
+
+    .left-footer > img {
+        grid-column: 2;
+        grid-row: 2;
+        align-self: end;
+        justify-self: end;
+        width: 50.36vw; 
+        max-width: 216.545px;
+        height: auto;
+    }
+}

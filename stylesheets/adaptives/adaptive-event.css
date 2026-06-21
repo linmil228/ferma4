@@ -1,0 +1,494 @@
+
+
+@media (max-width: 1919px) {
+    .event-page__info {
+        padding: 2.083vw 1.042vw 0.729vw; 
+    }
+
+    .event-page__body {
+        gap: 0.573vw; 
+    }
+
+    .event-page__header {
+        gap: 0.729vw; 
+    }
+
+    .event-page__date-badge {
+        min-width: 16.875vw; 
+        height: 6.354vw; 
+        padding: 0 1.25vw; 
+        font-size: clamp(36px, 5.052vw, 97px);
+    }
+
+    .stroke-text--event-page {
+        --font-size: clamp(32px, 4.948vw, 95px);
+        --stroke-width: clamp(16px, 2.188vw, 42px);
+    }
+
+    .stroke-text--event-page-long {
+        --font-size: clamp(22px, 3.125vw, 60px);
+        --stroke-width: clamp(10px, 1.563vw, 30px);
+    }
+
+    .event-page__description {
+        padding: 1.302vw 1.042vw 0.781vw; 
+        font-size: 1.406vw; 
+    }
+
+    .event-page__ticket-btn {
+        min-height: 5.365vw; 
+        padding: 1.302vw 1.042vw 0.781vw; 
+        font-size: 1.979vw; 
+    }
+
+    .event-page__poster {
+        width: min(57.4%, 32.969vw); 
+    }
+}
+
+@media (max-width: 1536px) {
+    .event-page__info {
+        padding: 2.214vw 1.107vw 0.781vw; 
+    }
+
+    .event-page__body {
+        gap: 0.625vw; 
+    }
+
+    .event-page__header {
+        gap: 0.781vw; 
+    }
+
+    .event-page__date-badge {
+        min-width: 0;
+        width: fit-content;
+        height: 6.836vw; 
+        padding: 0 1.367vw; 
+        font-size: clamp(26px, 5.469vw, 84px);
+    }
+
+    .stroke-text--event-page {
+        --font-size: clamp(24px, 5.339vw, 82px);
+        --stroke-width: clamp(12px, 2.344vw, 36px);
+    }
+
+    .stroke-text--event-page-long {
+        --font-size: 60px;
+        --stroke-width: 26px;
+    }
+
+    .event-page__description {
+        padding: 1.432vw 1.107vw 0.859vw; 
+        font-size: 1.523vw; 
+    }
+
+    .event-page__ticket-btn {
+        min-height: 5.794vw; 
+        padding: 1.432vw 1.107vw 0.859vw;
+        font-size: 2.148vw; 
+    }
+
+    .event-page__poster {
+        width: min(50%, 35.156vw); 
+    }
+
+    .event-page__poster-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 1200px) {
+    .event-page__info {
+        padding: 2.833vw 1.417vw 0.992vw; 
+    }
+
+    .event-page__body {
+        gap: 0.75vw; 
+    }
+
+    .event-page__header {
+        gap: 0.992vw; 
+    }
+
+    .event-page__date-badge {
+        min-width: 0;
+        width: fit-content;
+        height: clamp(42px, 8.75vw, 105px);
+        padding: 0 1.75vw; 
+        font-size: clamp(24px, 5.583vw, 67px);
+    }
+
+    .stroke-text--event-page {
+        --font-size: clamp(20px, 5vw, 62px);
+        --stroke-width: clamp(10px, 2.25vw, 28px);
+    }
+
+    .stroke-text--event-page-long {
+        --font-size: clamp(40px, 4.167vw, 60px);
+        --stroke-width: clamp(14px, 1.806vw, 26px);
+    }
+
+    .event-page__description {
+        padding: 1.75vw 1.417vw 1.05vw; 
+        font-size: 1.917vw; 
+    }
+
+    .event-page__ticket-btn {
+        min-height: 7.417vw; 
+        padding: 1.75vw 1.417vw 1.05vw;
+        font-size: 2.75vw; 
+    }
+
+    .event-page__poster {
+        width: min(50%, 45vw); 
+    }
+
+    .event-page__poster-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 768px) {
+    .event-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--color-yellow);
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        padding: 1.953vw 0 2.604vw; 
+        box-sizing: border-box;
+    }
+
+    .event-page:has(.event-page__panel--podium) {
+        background-image: url(../../assets/img/events/event-bg-podium.svg);
+    }
+
+    .event-page:has(.event-page__panel--festival) {
+        background-image: url(../../assets/img/events/event-bg-festival.svg);
+    }
+
+    .event-page:has(.event-page__panel--lecture) {
+        background-image: url(../../assets/img/events/event-bg-lecture.svg);
+    }
+
+    .event-page:has(.event-page__panel--masterclass) {
+        background-image: url(../../assets/img/events/event-bg-masterclass.svg);
+    }
+
+    .event-page__layout {
+        display: grid;
+        grid-template-columns: minmax(0, 452fr) minmax(0, 290fr);
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "gallery side"
+            "description description";
+        width: 96.615vw; 
+        max-width: 742px;
+        padding: 0 1.953vw; 
+        min-height: 0;
+        row-gap: 1.042vw; 
+        column-gap: 0;
+        background: none;
+        box-sizing: border-box;
+    }
+
+    .event-page__layout::before {
+        content: "";
+        grid-column: 1 / -1;
+        grid-row: 1;
+        background-color: var(--color-gray);
+        border-radius: 2.604vw; 
+        z-index: 0;
+        min-height: 79.297vw; 
+        max-height: 608px;
+    }
+
+    .event-page__gallery {
+        grid-area: gallery;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: stretch;
+        min-height: 0;
+        padding: 2.995vw 0 2.995vw 2.995vw; 
+        background-color: transparent !important;
+        box-sizing: border-box;
+    }
+
+    .event-page__poster {
+        width: 100%;
+        height: 74.219vw; 
+        max-height: 569px;
+        aspect-ratio: auto;
+        border: 0.651vw solid var(--color-blue); 
+        border-radius: 1.302vw; 
+        box-shadow: 0 0.057vw 1.437vw 0.684vw rgba(0, 0, 0, 0.25);
+        box-sizing: border-box;
+    }
+
+    .event-page__poster-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .event-page__panel {
+        display: contents;
+        padding: 0;
+        background: none;
+        background-image: none;
+    }
+
+    .event-page__info {
+        display: contents;
+    }
+
+    .event-page__header {
+        grid-area: side;
+        align-self: start;
+        justify-self: stretch;
+        align-items: flex-start;
+        flex-shrink: 0;
+        gap: 1.602vw; 
+        padding: 1.953vw 2.604vw 0; 
+        box-sizing: border-box;
+        z-index: 1;
+    }
+
+    .event-page__date-badge {
+        min-width: 0;
+        width: fit-content;
+        height: 7.227vw; 
+        max-height: 55.5px;
+        padding: 0 1.992vw; 
+        border-width: 0.628vw; 
+        border-radius: 1.401vw; 
+        font-size: 6.076vw; 
+    }
+
+    .stroke-text--event-page {
+        --font-size: 3.214vw; 
+        --stroke-width: 1.953vw; 
+    }
+
+    .stroke-text--event-page-long {
+        --font-size: 2.604vw; 
+        --stroke-width: 1.563vw; 
+    }
+
+    .event-page__body {
+        display: contents;
+    }
+
+    .event-page__description {
+        grid-area: description;
+        align-self: stretch;
+        justify-self: stretch;
+        width: 100%;
+        padding: 1.714vw 1.693vw; 
+        border-radius: 2.083vw; 
+        font-size: 2.409vw; 
+        line-height: 1.3;
+        box-sizing: border-box;
+        z-index: 1;
+    }
+
+    .event-page__ticket-btn {
+        grid-area: side;
+        align-self: end;
+        justify-self: stretch;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        min-height: 5.339vw; 
+        max-height: 41px;
+        height: auto;
+        border-radius: 1.119vw;
+        background-color: var(--color-blue);
+        color: var(--color-gray);
+        font-size: clamp(16px, 2.826vw, 27px);
+        line-height: 1.2;
+        text-align: center;
+        box-sizing: border-box;
+        z-index: 1;
+        margin: 2.604vw;
+    }
+
+    .event-page__ticket-btn:hover {
+        background-color: var(--color-gray);
+        color: var(--color-blue);
+    }
+}
+
+@media (max-width: 430px) {
+    .event-page {
+        padding: 1.86vw 0 2.791vw; 
+    }
+
+    .event-page:has(.event-page__panel--podium) {
+        background-image: url(../../assets/img/events/event-bg-podium.svg);
+    }
+
+    .event-page:has(.event-page__panel--festival) {
+        background-image: url(../../assets/img/events/event-bg-festival.svg);
+    }
+
+    .event-page:has(.event-page__panel--lecture) {
+        background-image: url(../../assets/img/events/event-bg-lecture.svg);
+    }
+
+    .event-page:has(.event-page__panel--masterclass) {
+        background-image: url(../../assets/img/events/event-bg-masterclass.svg);
+    }
+
+    .event-page__layout {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 96.512vw; 
+        max-width: 415px;
+        padding: 4.651vw; 
+        gap: 4.646vw; 
+        background-color: var(--color-gray);
+        border-radius: 2.601vw; 
+        box-sizing: border-box;
+        min-height: 0;
+    }
+
+    .event-page__layout::before {
+        display: none;
+    }
+
+    .event-page__gallery {
+        order: 1;
+        width: 100%;
+        padding: 0;
+        background-color: transparent !important;
+    }
+
+    .event-page__poster {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        max-height: none;
+        aspect-ratio: 371 / 533;
+        border-width: 0.959vw; 
+        border-radius: 1.919vw; 
+    }
+
+    .event-page__panel {
+        display: contents;
+        padding: 0;
+    }
+
+    .event-page__info {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4.646vw; 
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
+
+    .event-page__header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5.814vw; 
+        width: 100%;
+    }
+
+    .event-page__body {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4.646vw; 
+        width: 100%;
+    }
+
+    .event-page__description {
+        order: 0;
+        width: 100%;
+        padding: 1.86vw; 
+        border-radius: 2.326vw; 
+        font-size: 3.256vw; 
+        line-height: 1.3;
+    }
+
+    .event-page__ticket-btn {
+        order: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 12.662vw; 
+        padding: 0;
+        border-radius: 2.326vw; 
+        background-color: var(--color-blue);
+        color: var(--color-gray);
+        font-size: 8.837vw; 
+        line-height: 1.2;
+        text-align: center;
+        margin: 0;
+    }
+
+    .event-page__title {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .stroke-text--event-page {
+        --font-size: 5.5vw; 
+        --stroke-width: 2.791vw; 
+        display: block;
+        width: 100%;
+        text-align: right;
+    }
+
+    .stroke-text--event-page-long {
+        --font-size: 4.651vw; 
+        --stroke-width: 2.326vw; 
+    }
+
+    .stroke-text--event-page span {
+        display: block;
+        width: 100%;
+        text-align: right;
+        white-space: normal;
+    }
+
+    .stroke-text--event-page::before {
+        left: var(--padding);
+        right: 0;
+        width: auto;
+        text-align: right;
+        white-space: normal;
+    }
+
+    .event-page__date-badge {
+        flex-shrink: 0;
+        min-width: 0;
+        width: fit-content;
+        height: 12.784vw; 
+        padding: 0 3.46vw; 
+        border-width: 0.628vw;
+        border-radius: 1.401vw;
+        font-size: 10.93vw; 
+    }
+
+    .event-page__ticket-btn:hover {
+        background-color: var(--color-gray);
+        color: var(--color-blue);
+    }
+}

@@ -1,0 +1,222 @@
+.events {
+    width: 100%;
+    min-height: calc(100vh - var(--nav-height));
+    background-color: var(--color-blue);
+    background-image: url(../../assets/img/backgrounds/events-bg.svg);
+    background-size: cover;
+    background-position: center top;
+}
+
+.events__stage {
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding-bottom: 6px;
+}
+
+.events__board {
+    position: relative;
+    width: 100%;
+    padding-bottom: 53.02%; 
+}
+
+.event-card {
+    --card-pad: clamp(9px, 1.04vw, 20px);
+    --title-pad-left: calc(var(--card-pad) + 5px);
+    --title-size: clamp(28px, 2.81vw, 54px);
+    --date-size: clamp(28px, 2.86vw, 55px);
+    --date-w: clamp(120px, 9.43vw, 181px);
+    --date-h: clamp(40px, 3.54vw, 68px);
+
+    position: absolute;
+    background-color: var(--color-gray);
+    overflow: hidden;
+    box-sizing: border-box;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: opacity 0.25s ease;
+        z-index: 0;
+    }
+
+    &::before {
+        background-image: var(--card-image);
+        opacity: 1;
+    }
+
+    &::after {
+        background-image: var(--card-image-hover);
+        opacity: 0;
+    }
+
+    &:hover::after {
+        opacity: 1;
+    }
+}
+
+.event-card__date {
+    position: absolute;
+    top: var(--card-pad);
+    left: var(--card-pad);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: var(--date-w);
+    height: var(--date-h);
+    padding-left: clamp(10px, 0.94vw, 18px);
+    background-color: var(--color-yellow);
+    color: var(--color-gray);
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: var(--date-size);
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.event-card__title {
+    position: absolute;
+    left: var(--title-pad-left);
+    bottom: var(--card-pad);
+    margin: 0;
+    padding-left: var(--title-stroke-inset, 0);
+    color: var(--color-yellow);
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: var(--title-size);
+    line-height: 1;
+    box-sizing: border-box;
+}
+
+.event-card__title--vertical {
+    top: var(--card-pad);
+    bottom: auto;
+    left: var(--title-pad-left);
+    writing-mode: vertical-rl;
+    white-space: nowrap;
+}
+
+.event-card__title--multiline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    line-height: 1;
+}
+
+.event-card__title--multiline span {
+    display: block;
+}
+
+.event-card__date--vertical {
+    top: var(--card-pad);
+    left: auto;
+    right: var(--card-pad);
+    width: var(--date-h);
+    height: var(--date-w);
+    padding: 0;
+    writing-mode: vertical-rl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.event-card--podium {
+    --card-image: url(../../assets/img/events/bg-podium.svg);
+    --card-image-hover: url(../../assets/img/events/bg-podium-hover.svg);
+}
+
+.event-card--zine {
+    --card-image: url(../../assets/img/events/bg-zine.svg);
+    --card-image-hover: url(../../assets/img/events/bg-zine-hover.svg);
+}
+.event-card--festival {
+    --card-image: url(../../assets/img/events/bg-fest.svg);
+    --card-image-hover: url(../../assets/img/events/bg-fest-hover.svg);
+}
+.event-card--lecture {
+    --card-image: url(../../assets/img/events/bg-lec.svg);
+    --card-image-hover: url(../../assets/img/events/bg-lec-hover.svg);
+}
+.event-card--masterclass {
+    --card-image: url(../../assets/img/events/bg-master.svg);
+    --card-image-hover: url(../../assets/img/events/bg-master-hover.svg);
+}
+.event-card--poster {
+    --card-image: url(../../assets/img/events/bg-web.svg);
+    --card-image-hover: url(../../assets/img/events/bg-web-hover.svg);
+}
+
+.event-card--podium,
+.event-card--festival,
+.event-card--lecture,
+.event-card--masterclass,
+.event-card[data-event-id],
+.event-card:has(.event-card__link) {
+    cursor: var(--cursor-active);
+}
+
+.event-card__date,
+.event-card__title,
+.event-card__link {
+    z-index: 2;
+}
+.event-card--podium {
+    left: 18.33%;
+    top: 32.91%;
+    width: 20.83%;
+    height: 32.32%;
+}
+
+.event-card--festival {
+    left: 51.18%;
+    top: 40.5%;
+    width: 20.83%;
+    height: 27.26%;
+    transform: rotate(14deg);
+    transform-origin: center center;
+}
+
+.event-card--zine {
+    left: 85.1%;
+    top: 32.91%;
+    width: 10.42%;
+    height: 66.99%;
+}
+
+.event-card--lecture {
+    left: 4.22%;
+    top: 67.68%;
+    width: 20.83%;
+    height: 32.32%;
+}
+
+.event-card--masterclass {
+    left: 27.71%;
+    top: 67.68%;
+    width: 31.25%;
+    height: 32.32%;
+}
+
+.event-card--masterclass .event-card__title {
+    max-width: calc(100% - var(--title-pad-left) - var(--card-pad));
+}
+
+.event-card--poster {
+    left: 61.61%;
+    top: 72.79%;
+    width: 20.83%;
+    height: 27.21%;
+}
+.event-card__link {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    text-decoration: none;
+}

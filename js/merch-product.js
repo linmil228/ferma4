@@ -5,6 +5,8 @@ function getStore() {
 let pendingQty = 1;
 let currentProduct = null;
 
+const LONG_TITLE_IDS = new Set(['tshirt', 'stickers']);
+
 function getDisplayQty(product) {
     const store = getStore();
     const cartQty = store.getQuantity(product.id);
@@ -49,10 +51,6 @@ function createQuantityControl(product) {
     minusBtn.className = 'merch-product__quantity-btn clickable';
     minusBtn.textContent = '-';
     minusBtn.setAttribute('aria-label', 'Уменьшить количество');
-    if (qty <= 1) {
-        minusBtn.classList.add('merch-product__quantity-btn--disabled');
-        minusBtn.disabled = true;
-    }
 
     const countEl = document.createElement('span');
     countEl.className = 'merch-product__quantity-count';
@@ -64,7 +62,7 @@ function createQuantityControl(product) {
     plusBtn.textContent = '+';
     plusBtn.setAttribute('aria-label', 'Увеличить количество');
     if (qty >= max) {
-        plusBtn.classList.add('merch-product__quantity-btn--disabled');
+        plusBtn.classList.add('is-disabled');
         plusBtn.disabled = true;
     }
 
@@ -96,10 +94,11 @@ function renderPurchaseBar(product) {
     }
 }
 
-function setStrokeTitle(titleEl, name) {
+function setStrokeTitle(titleEl, name, productId) {
     if (!titleEl) return;
     const text = name.toLowerCase();
     titleEl.dataset.text = text;
+    titleEl.classList.toggle('stroke-text--merch-product-long', LONG_TITLE_IDS.has(productId));
     const span = titleEl.querySelector('span');
     if (span) span.textContent = text;
 }
@@ -119,7 +118,7 @@ function renderProduct(product) {
     const imageBgEl = document.querySelector('.merch-product__image-bg');
     const galleryEl = document.querySelector('.merch-product__gallery');
 
-    setStrokeTitle(titleEl, product.name);
+    setStrokeTitle(titleEl, product.name, product.id);
     if (priceEl) priceEl.textContent = store.formatPrice(product.price);
     if (descEl) {
         descEl.textContent = window.fixTypography
@@ -137,7 +136,7 @@ function renderProduct(product) {
     }
 
     if (imageEl) {
-        imageEl.src = product.image;
+        imageEl.src = store.getProductImage(product);
         imageEl.alt = product.name;
         imageEl.className = `merch-product__image merch-product__image--${product.imageFit || 'cover'}`;
     }
@@ -161,6 +160,14 @@ function onCartUpdated() {
     renderPurchaseBar(currentProduct);
 }
 
+function onResize() {
+    if (!currentProduct) return;
+    const imageEl = document.querySelector('.merch-product__image');
+    if (imageEl) {
+        imageEl.src = getStore().getProductImage(currentProduct);
+    }
+}
+
 function initMerchProduct() {
     const store = getStore();
     if (!store) return;
@@ -176,6 +183,7 @@ function initMerchProduct() {
     pendingQty = 1;
     renderProduct(product);
     window.addEventListener('cart:updated', onCartUpdated);
+    window.addEventListener('resize', onResize);
 }
 
 document.addEventListener('DOMContentLoaded', initMerchProduct);

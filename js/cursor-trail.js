@@ -51,7 +51,7 @@
 
     document.addEventListener('mousemove', (e) => {
         if (e.target.closest('nav, footer')) return;
-    
+
         const now = performance.now();
         const { interval } = config();
         if (now - lastSpawn < interval) return;

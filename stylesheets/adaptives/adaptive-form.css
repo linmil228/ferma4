@@ -1,0 +1,693 @@
+
+
+@media (max-width: 1919px) {
+    .form {
+        padding: 2.085vw 1.042vw; 
+    }
+
+    .form__card {
+        gap: 2.137vw; 
+        padding: 1.615vw 1.72vw; 
+        border-width: 0.278vw; 
+        border-radius: 0.869vw; 
+    }
+
+    .form__left {
+        gap: 0.521vw; 
+    }
+
+    .form__field {
+        gap: 0.347vw; 
+    }
+
+    .form__label {
+        font-size: 0.938vw; 
+    }
+
+    .form__input {
+        height: 2.154vw; 
+        padding: 0 0.649vw; 
+        border-radius: 0.695vw; 
+        font-size: 1.042vw; 
+    }
+
+    .form__toggles {
+        gap: 2.606vw; 
+        padding-top: 1.251vw; 
+    }
+
+    .form-toggle {
+        gap: 0.417vw; 
+    }
+
+    .form-toggle__track {
+        width: 3.022vw; 
+        height: 1.459vw; 
+        border-radius: 0.729vw; 
+    }
+
+    .form-toggle__track::after {
+        top: 0.208vw; 
+        left: 0.208vw;
+        width: 1.042vw; 
+        height: 1.042vw;
+    }
+
+    .form-toggle__input:checked + .form-toggle__track::after {
+        transform: translateX(1.564vw); 
+    }
+
+    .form-toggle__text {
+        font-size: 0.764vw; 
+    }
+
+    .form__right {
+        gap: 0.782vw; 
+        padding: 0.521vw; 
+        border-radius: 0.695vw; 
+    }
+
+    .form__address {
+        gap: 0.521vw; 
+    }
+
+    .form__address-row {
+        gap: 0.347vw; 
+        grid-template-columns: minmax(0, 1fr) 6.149vw; 
+    }
+
+    .form-combobox__trigger {
+        min-height: 2.154vw; 
+        padding: 0.174vw 0.695vw; 
+        border-radius: 0.695vw;
+    }
+
+    .form-combobox__input,
+    .form-combobox__option {
+        font-size: 1.042vw; 
+    }
+
+    .form-combobox__arrow {
+        width: 1.39vw; 
+        height: 1.39vw;
+    }
+
+    .form-combobox.is-open .form-combobox__trigger {
+        border-radius: 0.695vw 0.695vw 0 0;
+    }
+
+    .form-combobox.is-open .form-combobox__trigger::after {
+        left: 0.695vw;
+        right: 0.695vw;
+    }
+
+    .form-combobox__list {
+        border-radius: 0 0 0.695vw 0.695vw;
+    }
+
+    .form-combobox__option {
+        padding: 0.521vw 0.695vw;
+    }
+
+    .form-combobox__option:not(:last-child)::after {
+        left: 0.695vw;
+        right: 0.695vw;
+    }
+
+    .form__comment {
+        min-height: 9.172vw; 
+        padding: 0.347vw 0.695vw; 
+        border-radius: 0.695vw;
+        font-size: 1.042vw;
+    }
+
+    .form__checkout {
+        gap: 0.834vw; 
+    }
+
+    .form__total,
+    .form__pay-btn {
+        font-size: 2.223vw; 
+    }
+
+    .form__pay-btn {
+        height: 3.439vw; 
+        padding: 0 1.042vw; 
+        border-radius: 0.695vw;
+    }
+}
+
+@media (max-width: 1536px) {
+    .form {
+        padding: 2.604vw 1.302vw; 
+    }
+
+    .form__card {
+        gap: 3.203vw; 
+        padding: 2.422vw 2.578vw; 
+        border-width: 0.417vw; 
+        border-radius: 1.302vw; 
+    }
+
+    .form__left {
+        gap: 0.781vw; 
+    }
+
+    .form__field {
+        gap: 0.521vw; 
+    }
+
+    .form__label {
+        font-size: 1.406vw; 
+    }
+
+    .form__input {
+        height: 3.229vw; 
+        padding: 0 0.973vw; 
+        border-radius: 1.042vw; 
+        font-size: 1.563vw; 
+    }
+
+    .form__toggles {
+        gap: 3.125vw; 
+        padding-top: 1.563vw; 
+    }
+
+    .form-toggle {
+        gap: 0.625vw; 
+    }
+
+    .form-toggle__track {
+        width: 4.531vw; 
+        height: 2.188vw; 
+        border-radius: 1.094vw; 
+    }
+
+    .form-toggle__track::after {
+        top: 0.26vw; 
+        left: 0.26vw;
+        width: 1.667vw; 
+        height: 1.667vw;
+    }
+
+    .form-toggle__input:checked + .form-toggle__track::after {
+        transform: translateX(2.344vw); 
+    }
+
+    .form-toggle__text {
+        font-size: 1.146vw; 
+    }
+
+    .form__right {
+        gap: 0.977vw; 
+        padding: 0.781vw; 
+        border-radius: 1.042vw; 
+    }
+
+    .form__address {
+        gap: 0.781vw; 
+    }
+
+    .form__address-row {
+        gap: 0.521vw; 
+        grid-template-columns: minmax(0, 1fr) 9.219vw; 
+    }
+
+    .form-combobox__trigger {
+        min-height: 3.229vw; 
+        padding: 0.217vw 0.868vw; 
+        border-radius: 1.042vw;
+    }
+
+    .form-combobox__input,
+    .form-combobox__option {
+        font-size: 1.563vw; 
+    }
+
+    .form-combobox__arrow {
+        width: 2.083vw; 
+        height: 2.083vw;
+    }
+
+    .form-combobox.is-open .form-combobox__trigger {
+        border-radius: 1.042vw 1.042vw 0 0;
+    }
+
+    .form-combobox.is-open .form-combobox__trigger::after {
+        left: 0.868vw;
+        right: 0.868vw;
+    }
+
+    .form-combobox__list {
+        border-radius: 0 0 1.042vw 1.042vw;
+    }
+
+    .form-combobox__option {
+        padding: 0.651vw 0.868vw;
+    }
+
+    .form-combobox__option:not(:last-child)::after {
+        left: 0.868vw;
+        right: 0.868vw;
+    }
+
+    .form__comment {
+        min-height: 13.75vw; 
+        padding: 0.434vw 0.868vw;
+        border-radius: 1.042vw;
+        font-size: 1.563vw;
+    }
+
+    .form__checkout {
+        gap: 1.042vw; 
+    }
+
+    .form__total,
+    .form__pay-btn {
+        font-size: 3.333vw; 
+    }
+
+    .form__pay-btn {
+        height: 5.156vw; 
+        padding: 0 1.302vw; 
+        border-radius: 1.042vw;
+    }
+}
+
+@media (max-width: 1200px) {
+    .form {
+        padding: 3.333vw 1.667vw; 
+    }
+
+    .form__card {
+        gap: 3.417vw; 
+        padding: 2.583vw 2.75vw; 
+        border-width: 0.444vw; 
+        border-radius: 1.389vw; 
+    }
+
+    .form__left {
+        gap: 0.833vw; 
+    }
+
+    .form__field {
+        gap: 0.556vw; 
+    }
+
+    .form__label {
+        font-size: 1.5vw; 
+    }
+
+    .form__input {
+        height: 3.444vw; 
+        padding: 0 1.038vw; 
+        border-radius: 1.111vw; 
+        font-size: 1.667vw; 
+    }
+
+    .form__toggles {
+        gap: 4.167vw; 
+        padding-top: 2vw; 
+    }
+
+    .form-toggle {
+        gap: 0.667vw; 
+    }
+
+    .form-toggle__track {
+        width: 4.833vw; 
+        height: 2.333vw; 
+        border-radius: 1.167vw; 
+    }
+
+    .form-toggle__track::after {
+        top: 0.333vw; 
+        left: 0.333vw;
+        width: 1.667vw; 
+        height: 1.667vw;
+    }
+
+    .form-toggle__input:checked + .form-toggle__track::after {
+        transform: translateX(2.5vw); 
+    }
+
+    .form-toggle__text {
+        font-size: 1.222vw; 
+    }
+
+    .form__right {
+        gap: 1.25vw; 
+        padding: 0.833vw; 
+        border-radius: 1.111vw; 
+    }
+
+    .form__address {
+        gap: 0.833vw; 
+    }
+
+    .form__address-row {
+        gap: 0.556vw; 
+        grid-template-columns: minmax(0, 1fr) 9.833vw; 
+    }
+
+    .form-combobox__trigger {
+        min-height: 3.444vw; 
+        padding: 0.278vw 1.111vw; 
+        border-radius: 1.111vw;
+    }
+
+    .form-combobox__input,
+    .form-combobox__option {
+        font-size: 1.667vw; 
+    }
+
+    .form-combobox__arrow {
+        width: 2.222vw; 
+        height: 2.222vw;
+    }
+
+    .form-combobox.is-open .form-combobox__trigger {
+        border-radius: 1.111vw 1.111vw 0 0;
+    }
+
+    .form-combobox.is-open .form-combobox__trigger::after {
+        left: 1.111vw;
+        right: 1.111vw;
+    }
+
+    .form-combobox__list {
+        border-radius: 0 0 1.111vw 1.111vw;
+    }
+
+    .form-combobox__option {
+        padding: 0.833vw 1.111vw;
+    }
+
+    .form-combobox__option:not(:last-child)::after {
+        left: 1.111vw;
+        right: 1.111vw;
+    }
+
+    .form__comment {
+        min-height: 14.667vw; 
+        padding: 0.556vw 1.111vw;
+        border-radius: 1.111vw;
+        font-size: 1.667vw;
+    }
+
+    .form__checkout {
+        gap: 1.333vw; 
+    }
+
+    .form__total,
+    .form__pay-btn {
+        font-size: 3.556vw; 
+    }
+
+    .form__pay-btn {
+        height: 5.5vw; 
+        padding: 0 1.667vw; 
+        border-radius: 1.111vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .form {
+        padding: 5.208vw 2.604vw; 
+        min-height: calc(100vh - var(--nav-height));
+    }
+
+    .form__card {
+        display: flex;
+        flex-direction: column;
+        gap: 3.516vw; 
+        width: 100%;
+        max-width: none;
+        padding: 2.995vw 2.734vw; 
+        border-width: 0.694vw; 
+        border-radius: 2.17vw; 
+    }
+
+    .form__left {
+        gap: 1.302vw; 
+    }
+
+    .form__field {
+        gap: 0.868vw; 
+    }
+
+    .form__label {
+        font-size: 2.344vw; 
+    }
+
+    .form__input {
+        height: 5.381vw; 
+        padding: 0 1.622vw; 
+        border-radius: 1.736vw; 
+        font-size: 2.604vw; 
+    }
+
+    .form__toggles {
+        gap: 2.734vw; 
+        margin-top: 0;
+        padding-top: 3.125vw; 
+    }
+
+    .form-toggle {
+        gap: 1.042vw; 
+    }
+
+    .form-toggle__track {
+        width: 7.552vw; 
+        height: 3.646vw; 
+        border-radius: 1.823vw; 
+    }
+
+    .form-toggle__track::after {
+        top: 0.521vw; 
+        left: 0.521vw;
+        width: 2.604vw; 
+        height: 2.604vw;
+    }
+
+    .form-toggle__input:checked + .form-toggle__track::after {
+        transform: translateX(3.906vw); 
+    }
+
+    .form-toggle__text {
+        font-size: 1.909vw; 
+    }
+
+    .form__right {
+        gap: 1.953vw; 
+        min-height: auto;
+        padding: 1.302vw; 
+        border-radius: 1.736vw; 
+    }
+
+    .form__address {
+        gap: 1.302vw; 
+    }
+
+    .form__address-row {
+        gap: 0.868vw; 
+        grid-template-columns: minmax(0, 1fr) 15.365vw; 
+    }
+
+    .form-combobox__trigger {
+        min-height: 5.381vw; 
+        padding: 0.434vw 1.736vw; 
+        border-radius: 1.736vw;
+    }
+
+    .form-combobox__input,
+    .form-combobox__option {
+        font-size: 2.604vw; 
+    }
+
+    .form-combobox__arrow {
+        width: 3.472vw; 
+        height: 3.472vw;
+    }
+
+    .form-combobox.is-open .form-combobox__trigger {
+        border-radius: 1.736vw 1.736vw 0 0;
+    }
+
+    .form-combobox.is-open .form-combobox__trigger::after {
+        left: 1.736vw;
+        right: 1.736vw;
+    }
+
+    .form-combobox__list {
+        border-radius: 0 0 1.736vw 1.736vw;
+    }
+
+    .form-combobox__option {
+        padding: 1.302vw 1.736vw;
+    }
+
+    .form-combobox__option:not(:last-child)::after {
+        left: 1.736vw;
+        right: 1.736vw;
+    }
+
+    .form__comment {
+        min-height: 22.917vw; 
+        padding: 0.868vw 1.736vw;
+        border-radius: 1.736vw;
+        font-size: 2.604vw;
+    }
+
+    .form__checkout {
+        gap: 2.083vw; 
+    }
+
+    .form__total,
+    .form__pay-btn {
+        font-size: 5.556vw; 
+    }
+
+    .form__pay-btn {
+        height: 8.594vw; 
+        padding: 0 2.604vw; 
+        border-radius: 1.736vw;
+    }
+}
+
+@media (max-width: 430px) {
+    .form {
+        padding: 9.302vw 4.651vw; 
+    }
+
+    .form__card {
+        gap: 5.051vw; 
+        padding: 5.349vw 4.884vw; 
+        border-width: 0.998vw; 
+        border-radius: 3.118vw; 
+    }
+
+    .form__left {
+        gap: 1.996vw; 
+    }
+
+    .form__field {
+        gap: 1.197vw; 
+    }
+
+    .form__label {
+        font-size: 3.367vw; 
+    }
+
+    .form__input {
+        height: 7.732vw; 
+        padding: 0 2.899vw; 
+        border-radius: 3.101vw; 
+        font-size: 3.742vw; 
+    }
+
+    .form__toggles {
+        gap: 3.953vw; 
+        padding-top: 5.581vw; 
+    }
+
+    .form-toggle {
+        gap: 1.86vw; 
+    }
+
+    .form-toggle__track {
+        width: 10.85vw; 
+        height: 5.238vw; 
+        border-radius: 2.619vw;
+    }
+
+    .form-toggle__track::after {
+        top: 0.93vw; 
+        left: 0.93vw;
+        width: 3.378vw; 
+        height: 3.378vw;
+    }
+
+    .form-toggle__input:checked + .form-toggle__track::after {
+        transform: translateX(5.612vw); 
+    }
+
+    .form-toggle__text {
+        font-size: 2.744vw; 
+    }
+
+    .form__right {
+        gap: 3.488vw; 
+        padding: 2.326vw; 
+        border-radius: 3.101vw;
+    }
+
+    .form__address {
+        gap: 2.326vw;
+    }
+
+    .form__address-row {
+        gap: 1.549vw; 
+        grid-template-columns: minmax(0, 1fr) 22.075vw; 
+    }
+
+    .form-combobox__trigger {
+        min-height: 7.732vw;
+        padding: 0.775vw 3.101vw;
+        border-radius: 3.101vw;
+    }
+
+    .form-combobox__input,
+    .form-combobox__option {
+        font-size: 3.742vw;
+    }
+
+    .form-combobox__arrow {
+        width: 6.202vw; 
+        height: 6.202vw;
+    }
+
+    .form-combobox.is-open .form-combobox__trigger {
+        border-radius: 3.101vw 3.101vw 0 0;
+    }
+
+    .form-combobox.is-open .form-combobox__trigger::after {
+        left: 3.101vw;
+        right: 3.101vw;
+    }
+
+    .form-combobox__list {
+        border-radius: 0 0 3.101vw 3.101vw;
+    }
+
+    .form-combobox__option {
+        padding: 2.326vw 3.101vw;
+    }
+
+    .form-combobox__option:not(:last-child)::after {
+        left: 3.101vw;
+        right: 3.101vw;
+    }
+
+    .form__comment {
+        min-height: 32.837vw; 
+        padding: 1.549vw 3.101vw;
+        border-radius: 3.101vw;
+        font-size: 3.742vw;
+    }
+
+    .form__checkout {
+        gap: 3.721vw;
+    }
+
+    .form__total,
+    .form__pay-btn {
+        font-size: 7.981vw; 
+    }
+
+    .form__pay-btn {
+        height: 12.347vw; 
+        padding: 0 4.651vw;
+        border-radius: 3.101vw;
+    }
+}

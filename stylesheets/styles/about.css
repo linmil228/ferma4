@@ -1,0 +1,352 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-section-about {
+    width: 100%;
+    height: calc(100vh - var(--nav-height));
+    background-image: url(../../assets/img/backgrounds/about-bg.svg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 41px;
+}
+
+.info-about-title {
+    width: 1617px;
+    height: 537px;
+    background-image: url(../../assets/img/backgrounds/info-title-bg.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.info-about-title__banner {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+.stroke-text--about-first-type {
+    --font-family: var(--font-sans);
+    --font-size: 34px;
+    --font-weight: 600;
+    --padding: 0;
+    --text-color: var(--color-blue);
+    --stroke-width: 35px;
+    --stroke-color: var(--color-gray);
+}
+
+.info-text {
+    max-width: 1617px;
+    display: flex;
+    flex-direction: row;
+    gap: 55px;
+    align-items: center;
+
+    h6 {
+        text-align: center;
+    }
+}
+
+.info-run {
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--color-yellow);
+    white-space: nowrap;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.info-run__track {
+    display: flex;
+    width: max-content;
+    animation: info-run-scroll 15s linear infinite;
+}
+
+.info-run__track span {
+    flex-shrink: 0;
+    padding-right: 80px;
+    color: var(--color-blue);
+    font-family: "Stolzl";
+    font-size: 165px;
+    font-weight: 700;
+    line-height: 1;
+    -webkit-text-stroke: 0.0485em var(--color-gray);
+    paint-order: stroke fill;
+}
+
+@keyframes info-run-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+
+    }
+}
+
+.zine-info {
+    width: 100%;
+    height: 1952px;
+    background-image: url(../../assets/img/backgrounds/zine-info-bg.svg);
+    background-size: contain;
+    position: relative;
+}
+
+.zine-title {
+    background-color: var(--color-yellow);
+    font-family: "Stolzl";
+    font-size: 58px;
+    font-weight: 700;
+    border-radius: var(--radius);
+    color: var(--color-gray);
+    padding: 0 295px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 136px;
+    width: fit-content;
+    position: absolute;
+    top: 96.5%;
+    left: 11%;
+}
+
+.zine-interactive {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../../assets/img/backgrounds/zine-interactive-bg.svg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.zine-interactive__content {
+    position: relative;
+    width: min(809px, 100%);
+    aspect-ratio: 809 / 836;
+}
+
+.stroke-text--about-second-type {
+    --font-family: var(--font-sans);
+    --font-size: 32px;
+    --font-weight: 600;
+    --padding: 0;
+    --text-color: var(--color-gray);
+    --stroke-width: 35px;
+    --stroke-color: var(--color-yellow);
+}
+
+#zine-text-1 {
+    position: absolute;
+    left: 29.06%;
+    top: 22.34%;
+    width: 600px;
+}
+
+#zine-text-2 {
+    position: absolute;
+    left: 35.52%;
+    top: 36.22%;
+    width: 717px;
+}
+
+#zine-text-3 {
+    position: absolute;
+    left: 29.06%;
+    top: 54%;
+    width: 643px;
+}
+
+#zine-text-4 {
+    position: absolute;
+    left: 35.52%;
+    top: 75.67%;
+    width: 630px;
+}
+
+.gray-tab {
+    background-color: var(--color-gray);
+}
+
+.yellow-tab {
+    background-color: var(--color-yellow);
+}
+
+.left-tab {
+    right: 90%;
+}
+
+.right-tab {
+    left: 90%;
+}
+
+#zine-interactive-tab-1 {
+    top: 6.46%;
+}
+
+#zine-interactive-tab-2 {
+    top: 37.80%;
+}
+
+#zine-interactive-tab-3 {
+    top: 65.79%;
+}
+
+#zine-interactive-tab-4 {
+    top: 74.52%;
+}
+
+#zine-interactive-tab-5 {
+    top: 8.73%;
+}
+
+#zine-interactive-tab-6 {
+    top: 18.66%;
+}
+
+#zine-interactive-tab-7 {
+    top: 57.42%;
+}
+
+#zine-interactive-tab-8 {
+    top: 75.84%;
+}
+
+.stroke-text--about-third-type {
+    --font-family: var(--font-stolzl);
+    --font-size: 57px;
+    --font-weight: 700;
+    --padding: 0;
+    --text-color: var(--color-gray);
+    --stroke-width: 35px;
+    --stroke-color: var(--color-yellow);
+}
+
+#zine-title-theme-1 {
+    position: absolute;
+    left: 2%;
+    top: 5%;
+    transform: rotate(12deg);
+    width: 750px;
+}
+
+#zine-title-theme-2 {
+    position: absolute;
+    left: 1.04%;
+    top: 47%;
+    transform: rotate(-16deg);
+}
+
+#zine-title-theme-3 {
+    position: absolute;
+    left: 65.78%;
+    top: 10%;
+    transform: rotate(-18deg);
+}
+
+#zine-title-theme-4 {
+    position: absolute;
+    left: 67.19%;
+    top: 55%;
+    transform: rotate(11deg);
+}
+
+.tab {
+    position: absolute;
+    width: 120px;
+    height: 110px;
+    border: none;
+    padding: 0;
+    z-index: 1;
+    transition: transform 0.35s ease;
+    cursor: var(--cursor-active);
+}
+
+.zine-page {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.zine-page__backdrop {
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-gray);
+    z-index: 0;
+}
+
+.zine-page__stage {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    transition:
+        opacity 0.35s ease,
+        filter 0.35s ease,
+        transform 0.35s ease;
+    will-change: opacity, filter, transform;
+}
+
+.zine-page__stage.is-fading {
+    opacity: 0;
+    filter: brightness(0.9);
+    transform: scale(0.99);
+}
+
+.zine-page__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    pointer-events: auto;
+}
+
+.left-tab.is-active {
+    transform: translateX(-48px);
+}
+
+.right-tab.is-active {
+    transform: translateX(48px);
+}
+
+@media (max-width: 736px) {
+    .tab {
+        width: 72px;
+        height: 66px;
+    }
+
+    .left-tab.is-active {
+        transform: translateX(-28px);
+    }
+
+    .right-tab.is-active {
+        transform: translateX(28px);
+    }
+
+    .zine-page__stage {
+        transition-duration: 0.28s;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .zine-page__stage,
+    .tab {
+        transition: none;
+    }
+
+    .zine-page__stage.is-fading {
+        opacity: 1;
+        filter: none;
+        transform: none;
+    }
+}

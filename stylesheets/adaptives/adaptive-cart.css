@@ -1,0 +1,399 @@
+
+
+@media (max-width: 1919px) {
+    .cart__inner {
+        max-width: calc(16.875vw * 3 + 1.667vw * 2 + 2.083vw);
+        padding: 4.167vw 1.042vw 1.667vw; 
+        gap: 1.667vw; 
+    }
+
+    .cart__grid {
+        gap: 1.667vw;
+        max-width: calc(16.875vw * 3 + 1.667vw * 2);
+    }
+
+    .cart__checkout-wrap {
+        padding: 1.198vw 2.344vw; 
+    }
+
+    .cart__checkout {
+        width: 19.635vw; 
+        padding: 0.729vw; 
+        gap: 0.625vw; 
+        border-radius: 0.521vw; 
+    }
+
+    .cart__total,
+    .cart__pay-btn {
+        font-size: 1.823vw; 
+    }
+
+    .cart__pay-btn {
+        height: 2.708vw; 
+        min-width: 6.563vw; 
+        padding: 0 0.729vw; 
+        border-radius: 0.521vw;
+    }
+
+    .cart__empty {
+        font-size: 1.823vw; 
+    }
+
+    .cart-card {
+        flex: 0 0 16.875vw; 
+        width: 16.875vw;
+        height: 18.229vw; 
+        padding: 0.781vw; 
+        border-radius: 0.781vw; 
+    }
+
+    .cart-card__image-wrap {
+        height: 14.115vw; 
+        padding: 0.417vw; 
+        border-radius: 0.521vw; 
+    }
+
+    .cart-card__image-bg,
+    .cart-card__image {
+        border-radius: 0.521vw;
+    }
+
+    .cart-card__quantity {
+        right: 0.417vw;
+        bottom: 0.417vw;
+        width: 5.469vw; 
+        height: 2.708vw; 
+        padding: 0.469vw 0.573vw 0.26vw; 
+        border-radius: 0.573vw; 
+    }
+
+    .cart-card__quantity-btn,
+    .cart-card__quantity-count {
+        font-size: 1.563vw; 
+    }
+
+    .cart-card__footer {
+        min-height: 2.344vw; 
+        font-size: 1.771vw; 
+    }
+}
+
+@media (max-width: 1536px) {
+    .cart__inner {
+        max-width: calc(16.875vw * 3 + 1.667vw * 2 + 2.604vw);
+        padding: 5.208vw 1.302vw 2.083vw;
+        gap: 1.667vw; 
+    }
+
+    .cart__grid {
+        gap: 1.667vw;
+        max-width: calc(16.875vw * 3 + 1.667vw * 2);
+    }
+
+    .cart__checkout-wrap {
+        padding: 1.497vw 2.93vw;
+    }
+
+    .cart__checkout {
+        width: clamp(260px, 24vw, 377px);
+        padding: 0.911vw;
+        border-radius: 0.651vw;
+        gap: 0.911vw;
+    }
+
+    .cart__total,
+    .cart__pay-btn {
+        font-size: clamp(24px, 2.083vw, 35px);
+    }
+
+    .cart__pay-btn {
+        height: 2.726vw; 
+        padding: 0 0.757vw; 
+        border-radius: 0.505vw;
+    }
+
+    .cart__empty {
+        font-size: 1.823vw;
+    }
+
+    .cart-card {
+        flex: 0 0 16.875vw; 
+        width: 16.875vw;
+        height: 18.229vw; 
+        padding: 0.781vw; 
+        border-radius: 0.781vw;
+    }
+
+    .cart-card__image-wrap {
+        height: 14.115vw; 
+        padding: 0.417vw; 
+        border-radius: 0.521vw; 
+    }
+
+    .cart-card__image-bg,
+    .cart-card__image {
+        border-radius: 0.521vw;
+    }
+
+    .cart-card__quantity {
+        right: 0.417vw;
+        bottom: 0.417vw;
+        width: 5.469vw; 
+        height: 2.708vw; 
+        padding: 0.469vw 0.573vw 0.26vw; 
+        border-radius: 0.568vw; 
+    }
+
+    .cart-card__quantity-btn,
+    .cart-card__quantity-count {
+        font-size: 1.539vw; 
+    }
+
+    .cart-card__footer {
+        min-height: 2.344vw; 
+        font-size: 1.823vw; 
+    }
+}
+
+@media (max-width: 1200px) {
+    .cart__inner {
+        max-width: calc(19.681vw * 3 + 1.944vw * 2 + 3.333vw);
+        padding: 6.667vw 1.667vw 2.667vw;
+        gap: 1.944vw; 
+    }
+
+    .cart__grid {
+        gap: 1.944vw;
+        max-width: calc(19.681vw * 3 + 1.944vw * 2);
+    }
+
+    .cart__checkout-wrap {
+        padding: 1.917vw 3.75vw;
+    }
+
+    .cart__checkout {
+        width: clamp(280px, 34vw, 377px);
+        padding: 1.167vw;
+        border-radius: 0.833vw;
+        gap: 1vw;
+    }
+
+    .cart__total,
+    .cart__pay-btn {
+        font-size: clamp(24px, 2.917vw, 35px);
+    }
+
+    .cart__total {
+        flex-shrink: 1;
+        min-width: 0;
+    }
+
+    .cart__pay-btn {
+        flex-shrink: 0;
+        height: auto;
+        min-height: 4.333vw;
+        padding: 0.667vw 1vw;
+        border-radius: 0.833vw;
+    }
+
+    .cart__empty {
+        font-size: 2.126vw;
+    }
+
+    .cart-card {
+        flex: 0 0 19.681vw;
+        width: 19.681vw;
+        height: 21.26vw;
+        padding: 0.911vw;
+        border-radius: 0.911vw;
+    }
+
+    .cart-card__image-wrap {
+        height: 16.461vw;
+        padding: 0.486vw;
+        border-radius: 0.607vw;
+    }
+
+    .cart-card__image-bg,
+    .cart-card__image {
+        border-radius: 0.607vw;
+    }
+
+    .cart-card__quantity {
+        right: 0.486vw;
+        bottom: 0.486vw;
+        width: 6.378vw;
+        height: 3.159vw;
+        padding: 0.547vw 0.668vw 0.304vw;
+        border-radius: 0.662vw;
+    }
+
+    .cart-card__quantity-btn,
+    .cart-card__quantity-count {
+        font-size: 1.796vw;
+    }
+
+    .cart-card__footer {
+        min-height: 2.733vw;
+        font-size: 2.126vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .cart__inner {
+        max-width: none;
+        padding: 5.208vw 2.604vw 2.604vw;
+        gap: 2.778vw; 
+    }
+
+    .cart__grid {
+        gap: 2.778vw;
+        max-width: calc(28.125vw * 3 + 2.778vw * 2); 
+    }
+
+    .cart__checkout-wrap {
+        justify-content: flex-end;
+        padding: 2.604vw 1.823vw 3.125vw;
+    }
+
+    .cart__checkout {
+        width: auto;
+        min-width: 38.281vw;
+        padding: 1.487vw; 
+        border-radius: 1.025vw; 
+    }
+
+    .cart__total,
+    .cart__pay-btn {
+        font-size: 3.776vw; 
+    }
+
+    .cart__pay-btn {
+        height: 5.537vw; 
+        padding: 0 1.537vw; 
+        border-radius: 1.025vw;
+    }
+
+    .cart__empty {
+        font-size: 3.125vw;
+    }
+
+    .cart-card {
+        flex: 0 0 28.125vw; 
+        width: 28.125vw;
+        height: 30.381vw; 
+        padding: 1.302vw; 
+        border-radius: 1.302vw;
+    }
+
+    .cart-card__image-wrap {
+        height: 23.524vw; 
+        padding: 0.694vw; 
+        border-radius: 0.868vw; 
+    }
+
+    .cart-card__image-bg,
+    .cart-card__image {
+        border-radius: 0.868vw;
+    }
+
+    .cart-card__quantity {
+        right: 0.694vw;
+        bottom: 0.694vw;
+        width: 9.115vw; 
+        height: 4.514vw; 
+        padding: 0.781vw 0.955vw 0.434vw; 
+        border-radius: 0.946vw; 
+    }
+
+    .cart-card__quantity-btn,
+    .cart-card__quantity-count {
+        font-size: 2.734vw; 
+    }
+
+    .cart-card__footer {
+        min-height: 3.906vw; 
+        font-size: 3.125vw; 
+    }
+}
+
+@media (max-width: 430px) {
+    .cart__inner {
+        padding: 9.302vw 6.512vw 4.651vw; 
+        gap: 6.867vw; 
+    }
+
+    .cart__grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 6.867vw;
+        max-width: 100%;
+    }
+
+    .cart__checkout-wrap {
+        justify-content: center;
+        padding: 4.651vw 6.512vw 6.977vw;
+    }
+
+    .cart__checkout {
+        width: 100%;
+        max-width: 69.535vw; 
+        padding: 2.592vw; 
+        border-radius: 1.787vw; 
+    }
+
+    .cart__total,
+    .cart__pay-btn {
+        font-size: 6.512vw; 
+    }
+
+    .cart__pay-btn {
+        height: 9.653vw; 
+        padding: 0 2.681vw; 
+        border-radius: 1.787vw;
+    }
+
+    .cart__empty {
+        font-size: 7.674vw; 
+    }
+
+    .cart-card {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 69.535vw; 
+        height: auto;
+        min-height: 75.115vw; 
+        padding: 3.219vw; 
+        border-radius: 3.219vw; 
+    }
+
+    .cart-card__image-wrap {
+        height: 58.16vw; 
+        padding: 1.717vw; 
+        border-radius: 2.146vw; 
+    }
+
+    .cart-card__image-bg,
+    .cart-card__image {
+        border-radius: 2.146vw;
+    }
+
+    .cart-card__quantity {
+        right: 1.717vw;
+        bottom: 1.717vw;
+        width: 22.534vw; 
+        height: 11.16vw; 
+        padding: 1.932vw 2.361vw 1.073vw; 
+        border-radius: 2.341vw; 
+    }
+
+    .cart-card__quantity-btn,
+    .cart-card__quantity-count {
+        font-size: 6.344vw; 
+    }
+
+    .cart-card__footer {
+        min-height: 9.658vw; 
+        font-size: 7.674vw; 
+    }
+}

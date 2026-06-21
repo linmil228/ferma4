@@ -4,6 +4,7 @@ function setStrokeTitle(titleEl, name) {
     titleEl.dataset.text = text;
     const span = titleEl.querySelector('span');
     if (span) span.textContent = text;
+    titleEl.classList.toggle('stroke-text--event-page-long', text.length > 24);
 }
 
 function renderEvent(event) {

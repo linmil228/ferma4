@@ -1,13 +1,13 @@
 const NAV_CART_DEFAULT =
     '<a href="./cart.html" class="nav-section clickable" data-cart-link>' +
-    '<img class="default-nav" src="assets/img/cart.svg" alt="">' +
-    '<img class="active-nav" src="assets/img/cart-active.svg" alt="">' +
+    '<img class="default-nav" src="assets/img/ui/cart.svg" alt="">' +
+    '<img class="active-nav" src="assets/img/ui/cart-active.svg" alt="">' +
     '</a>';
 
 const NAV_CART_ACTIVE =
     '<a href="./cart.html" class="nav-section clickable" data-cart-link>' +
-    '<img class="default-nav" src="assets/img/cart-active.svg" alt="">' +
-    '<img class="active-nav" src="assets/img/cart-active.svg" alt="">' +
+    '<img class="default-nav" src="assets/img/ui/cart-active.svg" alt="">' +
+    '<img class="active-nav" src="assets/img/ui/cart-active.svg" alt="">' +
     '</a>';
 
 const FOOTER_CART_HTML = '<a href="./cart.html" data-cart-link>корзина</a>';

@@ -4,45 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/ui/favicon.svg" type="image/svg+xml">
     <title>ferma</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
     <script src="js/page-counter.js" defer></script>
     <script src="js/cart-store.js" defer></script>
     <script src="js/cart-nav.js" defer></script>
+    <script src="js/nav-menu.js" defer></script>
     <script src="js/cursor-trail.js" defer></script>
 </head>
 
 <body>
     <nav>
         <a href="./index.html" class="clickable">
-            <img src="assets/img/logo.svg">
+            <img src="assets/img/ui/logo.svg">
         </a>
-        <div class="nav-sections">
+        <div class="nav-sections" id="nav-mobile-panel">
             <a href="./about.html" class="nav-section clickable">
-                <img class="default-nav" src="assets/img/about.svg">
-                <img class="active-nav" src="assets/img/about-active.svg">
+                <img class="default-nav" src="assets/img/ui/about.svg">
+                <img class="active-nav" src="assets/img/ui/about-active.svg">
             </a>
             <a href="./merch.html" class="nav-section clickable">
-                <img class="default-nav" src="assets/img/merch.svg">
-                <img class="active-nav" src="assets/img/merch-active.svg">
+                <img class="default-nav" src="assets/img/ui/merch.svg">
+                <img class="active-nav" src="assets/img/ui/merch-active.svg">
             </a>
             <a href="./order.html" class="nav-section clickable">
-                <img class="default-nav" src="assets/img/order.svg">
-                <img class="active-nav" src="assets/img/order-active.svg">
+                <img class="default-nav" src="assets/img/ui/order.svg">
+                <img class="active-nav" src="assets/img/ui/order-active.svg">
             </a>
             <a href="./events.html" class="nav-section clickable">
-                <img class="default-nav" src="assets/img/events.svg">
-                <img class="active-nav" src="assets/img/events-active.svg">
+                <img class="default-nav" src="assets/img/ui/events.svg">
+                <img class="active-nav" src="assets/img/ui/events-active.svg">
             </a>
         </div>
+        <button type="button" class="nav-burger clickable" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav-mobile-panel">
+            <img src="assets/img/ui/burger-menu.svg" alt="">
+        </button>
     </nav>
+    <div class="nav-overlay" aria-hidden="true"></div>
     <div class="cursor-trail" aria-hidden="true"></div>
     <main>
         <div class="box-color">
             <div class="box-main">
-                <h4 class="stroke-text stroke-text--hero" data-text="ferma - широкопрофильный дистрибьютор">
-                    <span>ferma - широкопрофильный дистрибьютор</span>
-                </h4>
+                <div class="hero-stroke">
+                    <h4 class="stroke-text stroke-text--hero hero-stroke__desktop" data-text="ferma — широкопрофильный дистрибьютор">
+                        <span>ferma — широкопрофильный дистрибьютор</span>
+                    </h4>
+                    <div class="hero-stroke__mobile">
+                        <h4 class="stroke-text stroke-text--hero hero-stroke__title" data-text="ferma —">
+                            <span>ferma —</span>
+                        </h4>
+                        <h4 class="stroke-text stroke-text--hero hero-stroke__subtitle" data-text="широкопрофильный дистрибьютор">
+                            <span>широкопрофильный дистрибьютор</span>
+                        </h4>
+                    </div>
+                </div>
                 <div class="main-text">
                     <div class="colomn-marking">
                         <div class="main-row-info">
@@ -50,12 +66,12 @@
                                 2026
                             </div>
                             <div class="marking">
-                                <img src="assets/img/marking1.svg">
-                                <img src="assets/img/marking2.svg">
-                                <img src="assets/img/marking3.svg">
+                                <img src="assets/img/ui/marking1.svg">
+                                <img src="assets/img/ui/marking2.svg">
+                                <img src="assets/img/ui/marking3.svg">
                             </div>
                         </div>
-                        <img src="assets/img/barcode.svg">
+                        <img src="assets/img/ui/barcode.svg">
                     </div>
                     <div class="counter-container">
                         <div class="line"></div>
@@ -71,10 +87,10 @@
     <footer>
         <div class="left-footer">
             <div class="contacts">
-                <img src="assets/img/logo-footer.svg">
+                <img src="assets/img/ui/logo-footer.svg">
                 <p>+7 912 345 67 89</p>
             </div>
-            <img src="assets/img/barcode-footer.png">
+            <img src="assets/img/ui/barcode-footer.png">
         </div>
         <div class="right-footer">
             <div class="footer-links">

@@ -96,7 +96,7 @@ class FormCombobox {
 
     setDisabled(disabled) {
         this.disabled = disabled;
-        this.root.classList.toggle('form-combobox--disabled', disabled);
+        this.root.classList.toggle('is-disabled', disabled);
         this.input.disabled = disabled;
         if (disabled) this.close();
     }
@@ -136,13 +136,13 @@ class FormCombobox {
         });
 
         this.isOpen = true;
-        this.root.classList.add('form-combobox--open');
+        this.root.classList.add('is-open');
         this.renderList(this.input.value);
     }
 
     close() {
         this.isOpen = false;
-        this.root.classList.remove('form-combobox--open');
+        this.root.classList.remove('is-open');
         if (this.selected) {
             this.input.value = this.selected;
         } else {
@@ -161,7 +161,7 @@ class FormCombobox {
     }
 
     updateFilledState() {
-        this.root.classList.toggle('form-combobox--filled', Boolean(this.selected));
+        this.root.classList.toggle('is-filled', Boolean(this.selected));
     }
 
     renderList(query = '') {
@@ -189,19 +189,42 @@ function formatPrice(value) {
     return `${value} ₽`;
 }
 
+function hasCheckoutItems() {
+    const orderTotal = window.OrderStore?.getTotalPrice?.() ?? 0;
+    const cartTotal = window.CartStore?.getTotalPrice?.() ?? 0;
+    return orderTotal > 0 || cartTotal > 0;
+}
+
+function updatePayButton() {
+    const payBtn = document.querySelector('.form__pay-btn');
+    if (payBtn) payBtn.disabled = !hasCheckoutItems();
+}
+
 function updateTotal() {
     const totalEl = document.querySelector('.form__total');
     const expressEl = document.querySelector('#express-delivery');
     if (!totalEl) return;
 
-    let total = 770;
-    if (window.CartStore && typeof window.CartStore.getTotalPrice === 'function') {
-        const cartTotal = window.CartStore.getTotalPrice();
-        if (cartTotal > 0) total = cartTotal;
+    let total = 0;
+
+    if (window.OrderStore && typeof window.OrderStore.getTotalPrice === 'function') {
+        total = window.OrderStore.getTotalPrice();
     }
-    if (expressEl?.checked) total += EXPRESS_FEE;
+
+    if (total === 0 && window.CartStore && typeof window.CartStore.getTotalPrice === 'function') {
+        total = window.CartStore.getTotalPrice();
+    }
+
+    if (!hasCheckoutItems()) {
+        total = 0;
+    } else if (total === 0) {
+        total = 770;
+    }
+
+    if (expressEl?.checked && hasCheckoutItems()) total += EXPRESS_FEE;
 
     totalEl.textContent = formatPrice(total);
+    updatePayButton();
 }
 
 function initFormComboboxes() {
@@ -325,8 +348,10 @@ function initForm() {
     const form = document.querySelector('.form__card');
     form?.addEventListener('submit', (e) => {
         e.preventDefault();
+        if (!hasCheckoutItems()) return;
         window.location.href = 'error.html';
     });
 }
 
 document.addEventListener('DOMContentLoaded', initForm);
+window.addEventListener('cart:updated', updateTotal);

@@ -1,7 +1,6 @@
 const CART_STORAGE_KEY = 'ferma-cart';
 const DEFAULT_MAX_QUANTITY = 99;
 
-/** В description неразрывные пробелы после предлогов добавляет js/typography.js при выводе. */
 const MERCH_PRODUCTS = [    {
         id: 'socks',
         name: 'Носки',
@@ -96,6 +95,14 @@ function getProduct(id) {
     return MERCH_PRODUCTS.find((p) => p.id === id);
 }
 
+function getProductImage(product) {
+    if (!product?.image) return '';
+    if (window.matchMedia('(max-width: 768px)').matches) {
+        return product.image.replace(/(\.[^./]+)$/, '-768$1');
+    }
+    return product.image;
+}
+
 function getMaxQuantity(product) {
     return product?.maxQuantity ?? DEFAULT_MAX_QUANTITY;
 }
@@ -142,6 +149,7 @@ function isEmpty() {
 window.CartStore = {
     PRODUCTS: MERCH_PRODUCTS,
     getProduct,
+    getProductImage,
     getQuantity,
     setQuantity,
     has,

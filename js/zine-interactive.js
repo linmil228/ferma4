@@ -1,12 +1,12 @@
 const ZINE_PAGES = [
-    'assets/img/zine-first.svg',
-    'assets/img/zine-page-1.svg',
-    'assets/img/zine-page-2.svg',
-    'assets/img/zine-page-3.svg',
-    'assets/img/zine-page-4.svg',
-    'assets/img/zine-page-5.svg',
-    'assets/img/zine-page-3-1.svg',
-    'assets/img/zine-page-2.svg',
+    'assets/img/zine/zine-first.svg',
+    'assets/img/zine/zine-page-1.svg',
+    'assets/img/zine/zine-page-2.svg',
+    'assets/img/zine/zine-page-3.svg',
+    'assets/img/zine/zine-page-4.svg',
+    'assets/img/zine/zine-page-5.svg',
+    'assets/img/zine/zine-page-3-1.svg',
+    'assets/img/zine/zine-page-2.svg',
 ];
 
 const FADE_MS = 350;
