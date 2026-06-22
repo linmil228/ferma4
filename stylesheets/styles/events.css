@@ -129,22 +129,28 @@
 
 .event-card--podium {
     --card-image: url(../../assets/img/events/bg-podium.svg);
+    --card-image-hover: url(../../assets/img/events/bg-podium-hover.svg);
 }
 
 .event-card--zine {
     --card-image: url(../../assets/img/events/bg-zine.svg);
+    --card-image-hover: url(../../assets/img/events/bg-zine-hover.svg);
 }
 .event-card--festival {
     --card-image: url(../../assets/img/events/bg-fest.svg);
+    --card-image-hover: url(../../assets/img/events/bg-fest-hover.svg);
 }
 .event-card--lecture {
     --card-image: url(../../assets/img/events/bg-lec.svg);
+    --card-image-hover: url(../../assets/img/events/bg-lec-hover.svg);
 }
 .event-card--masterclass {
     --card-image: url(../../assets/img/events/bg-master.svg);
+    --card-image-hover: url(../../assets/img/events/bg-master-hover.svg);
 }
 .event-card--poster {
     --card-image: url(../../assets/img/events/bg-web.svg);
+    --card-image-hover: url(../../assets/img/events/bg-web-hover.svg);
 }
 
 .event-card--podium,

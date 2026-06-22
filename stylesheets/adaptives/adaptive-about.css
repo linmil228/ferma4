@@ -367,7 +367,7 @@
         background-image: none;
     }
 
-    .info-about-title__banner-wrap {
+    .info-about-title__banner--768 {
         display: block;
     }
 
@@ -421,6 +421,7 @@
     .zine-info {
         height: auto;
         aspect-ratio: 770 / 937;
+        background-image: url(../../assets/img/backgrounds/zine-info-bg-768.svg);
         background-size: 100% auto;
         overflow: visible;
     }
@@ -485,6 +486,7 @@
         height: auto;
         min-height: 0;
         aspect-ratio: 768 / 1015;
+        background-image: url(../../assets/img/backgrounds/zine-interactive-bg-768.svg);
         background-size: 100% auto;
         background-repeat: no-repeat;
         background-position: top center;
@@ -530,6 +532,14 @@
         width: 96.279vw;
 
         aspect-ratio: 414 / 596;
+    }
+
+    .info-about-title__banner--768 {
+        display: none;
+    }
+
+    .info-about-title__banner--430 {
+        display: block;
     }
 
     .info-text {
@@ -582,6 +592,7 @@
     .zine-info {
         height: auto;
         aspect-ratio: 430 / 884;
+        background-image: url(../../assets/img/backgrounds/zine-info-bg-430.svg);
         background-size: 100% auto;
         overflow: visible;
     }
@@ -664,6 +675,7 @@
         position: relative;
         z-index: 1;
         aspect-ratio: 429 / 932;
+        background-image: url(../../assets/img/backgrounds/zine-interactive-bg-430.svg);
         background-size: 100% auto;
         background-repeat: no-repeat;
         background-position: top center;
